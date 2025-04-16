@@ -5,141 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elshaddai Skill Centre</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f0f4f8;
+            color: #333;
         }
         header {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
         }
         header p {
-            font-size: 1.5em;
-            color: #FFD700;
+            font-size: 1.3em;
+            color: #fff3cd;
             margin: 10px 0;
             font-style: italic;
         }
         nav {
-            background-color: #333;
+            background-color: #2d3436;
             text-align: center;
             padding: 15px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         nav a {
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 12px 20px;
             display: inline-block;
             font-weight: bold;
             transition: background-color 0.3s, transform 0.2s;
         }
         nav a:hover {
-            background-color: #555;
-            transform: scale(1.05);
+            background-color: #636e72;
+            transform: scale(1.1);
         }
-        marquee {
-            background-color: #ff6f61;
+        .banner {
+            background-color: #4CAF50;
             color: white;
-            padding: 10px;
+            padding: 15px;
             font-weight: bold;
+            font-size: 1.2em;
+            text-align: center;
         }
         main {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
-        .course, .service {
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
+        .courses-container .course, .services-container .service, .testimonials-container .testimonial {
+            display: block;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
             background-color: #fff;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .course:hover, .service:hover {
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-            transform: translateY(-5px);
+        .course:hover, .service:hover, .testimonial:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .course img, .service img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            margin-top: 10px;
         }
         h1, h2 {
-            color: #c71585;
+            font-family: 'Poppins', sans-serif;
+            color: #d81b60;
+        }
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
         }
         h3 {
-            color: #8B4513;
-            display: flex;
-            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: #2d3436;
+            font-size: 1.5em;
+            margin-top: 20px;
         }
-        h3 i {
-            margin-right: 10px;
-            color: #ff6f61;
+        .testimonial h4 {
+            font-size: 1.3em;
+        }
+        .course p, .service p, .testimonial p, #about p {
+            font-size: 1.1em;
+            line-height: 1.6;
         }
         a {
-            color: #ff69b4;
+            color: #4CAF50;
             text-decoration: none;
         }
         a:hover {
+            color: #d81b60;
             text-decoration: underline;
-            color: #c71585;
         }
         footer {
-            background-color: #333;
+            background-color: #2d3436;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             margin-top: 20px;
+            border-radius: 0 0 10px 10px;
         }
         .contact-item {
-            margin: 12px 0;
+            margin: 15px 0;
             display: flex;
             align-items: center;
+            font-size: 1.2em;
         }
         .contact-item i {
             margin-right: 12px;
-            color: #ff6f61;
+            color: #4CAF50;
         }
         .btn {
             display: inline-block;
             padding: 12px 25px;
-            background-color: #ff6f61;
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 25px;
+            margin-top: 15px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         .btn:hover {
-            background-color: #e55a50;
+            background: linear-gradient(135deg, #388E3C, #689F38);
+            transform: scale(1.05);
+        }
+        .testimonial {
+            padding: 30px;
+            border-radius: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            text-align: center;
+            position: relative;
+        }
+        .testimonial::before {
+            content: '\201C';
+            font-size: 60px;
+            color: #4CAF50;
+            position: absolute;
+            top: 0;
+            left: 10px;
+        }
+        .testimonial p {
+            font-style: normal;
+            padding-left: 40px;
+        }
+        .hamburger {
+            display: none;
+            font-size: 1.5em;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #2d3436;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+            }
+            header h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="Logo.jpg" alt="Elshaddai Skill Centre Logo" width="120">
+        <img src="Logo.jpeg" alt="Elshaddai Skill Centre Logo" width="120">
         <h1>Elshaddai Skill Centre</h1>
-        <p>LEARN & GROW</p>
+        <p><b><i>Learn and Grow</i></b></p>
+        <p>Empowering Students to Learn, Create, and Succeed!</p>
     </header>
     <nav>
-        <a href="#home"><i class="fas fa-home"></i> Home</a>
-        <a href="#courses"><i class="fas fa-book"></i> Courses</a>
-        <a href="#support"><i class="fas fa-tools"></i> Support Services</a>
-        <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+        <div class="nav-links">
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+            <a href="#courses"><i class="fas fa-book"></i> Courses</a>
+            <a href="#support"><i class="fas fa-tools"></i> Support Services</a>
+            <a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a>
+            <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+        </div>
     </nav>
-    <marquee behavior="scroll" direction="left">MS-Office Class Starts Today at 4:45pm</marquee>
+    <div class="banner">🚀 MS-Office Class Starts Today at 4:45pm! Enroll Now! 🚀</div>
     <main>
         <section id="home">
-            <h2>Welcome to Elshaddai Skill Centre</h2>
+            <h2>Discover Your Potential at Elshaddai</h2>
             <p><i class="fas fa-map-marker-alt"></i> Located at: 7/3, 8th street, Sundaram Nagar, M C Road, Thanjavur-613004</p>
             <p><i class="fas fa-clock"></i> Active Hours: Monday, Tuesday, Thursday, and Friday</p>
             <ul>
@@ -149,73 +251,167 @@
             <p><i class="fas fa-calendar-check"></i> Appointment needed in prior</p>
             <p><i class="fas fa-map"></i> <a href="https://maps.app.goo.gl/E6GKSsGycKJ3qeR6A" target="_blank">View Location</a></p>
             <div class="cta">
-                <a href="#contact" class="btn">Join Our Journey Now!</a>
+                <a href="#contact" class="btn">Start Your Journey Today!</a>
             </div>
         </section>
         <section id="courses">
-            <h2>Courses Offered</h2>
-            <div class="course">
-                <h3><i class="fas fa-graduation-cap"></i> 11th & 12th CS & CA Tuition Classes</h3>
-                <p>Discover your tech brilliance with our tailored tuition for 11th and 12th graders. In just 16 one-hour sessions, spark your future in Computer Science for only Rs 2000!</p>
-            </div>
-            <div class="course">
-                <h3><i class="fab fa-python"></i> Python For Beginners – 30-Day Foundation Course</h3>
-                <p>Embark on a coding adventure with Python! Our beginner-friendly course empowers you to create magic in 45 sessions, online or offline, for just Rs 4500.</p>
-            </div>
-            <div class="course">
-                <h3><i class="fas fa-code"></i> Learn C for Beginners – 30 Days</h3>
-                <p>Unleash your programming potential with C. Join our flexible 30-session course, online or offline, and innovate for only Rs 3000!</p>
-            </div>
-            <div class="course">
-                <h3><i class="fas fa-code"></i> Master C++ Fundamentals – 30 Days</h3>
-                <p>Step into C++ and shape your tech future. Master the basics in 30 sessions, online or offline, for Rs 3000!</p>
-            </div>
-            <div class="course">
-                <h3><i class="fas fa-code"></i> Combo Class: Learn C & C++ – 45 Days</h3>
-                <p>Double your skills with our C and C++ combo course. Conquer both in 30 sessions for just Rs 3000, online or offline!</p>
-            </div>
-            <div class="course">
-                <h3><i class="fas fa-laptop-code"></i> Web Designing: HTML, CSS & JavaScript – 30 Days</h3>
-                <p>Unleash your inner artist and craft stunning websites! Master HTML, CSS, and JavaScript in 30 sessions to create digital masterpieces. Join now for Rs 6000 and shine online!</p>
-            </div>
-            <div class="course">
-                <h3><i class="fas fa-desktop"></i> Ms-Office Automation – 30 Days</h3>
-                <p>Transform your productivity with Word, Excel, and PowerPoint expertise. Become a workplace star in 30 sessions for Rs 4500!</p>
-            </div>
-            <div class="course">
-                <h3><i class="fas fa-database"></i> Learn PHP & MySQL – 30 Days</h3>
-                <p>Build dynamic websites with PHP and MySQL. Our 30-session course, online or offline, sets you up for success at Rs 6000!</p>
-            </div>
-            <div class="course">
-                <h3><i class="fas fa-lightbulb"></i> 7 Days to a New You – Quantum Methods</h3>
-                <p>Reimagine your future with powerful mindset techniques. Transform in just 5 sessions for only Rs 500!</p>
-            </div>
-            <div class="course">
-                <h3><i class="fas fa-comment"></i> Speak English Confidently – 30 Days</h3>
-                <p>Shine bright with fluent English! Our 45-session course for all ages helps you speak with confidence, opening new doors. Join today for Rs 4500!</p>
+            <div class="courses-container">
+                <h2>Explore Our Cutting-Edge Courses</h2>
+                <div class="course">
+                    <h3><i class="fas fa-graduation-cap"></i> 11th & 12th CS & CA Tuition Classes</h3>
+                    <img src="pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Computer Science Classroom">
+                    <p>Discover your tech brilliance with our tailored tuition for 11th and 12th graders. In just 16 one-hour sessions, spark your future in Computer Science for only Rs 2000!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%2011th%20%26%2012th%20CS%20%26%20CA%20Tuition%20Classes.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fab fa-python"></i> Python For Beginners – 30-Day Foundation Course</h3>
+                    <img src="pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Person Coding Python">
+                    <p>Embark on a coding adventure with Python! Our beginner-friendly course empowers you to create magic in 45 sessions, online or offline, for just Rs 4500.</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20Python%20For%20Beginners%20-%2030-Day%20Foundation%20Course.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fas fa-code"></i> Learn C for Beginners – 30 Days</h3>
+                    <img src="pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="C Programming Code on Screen">
+                    <p>Unleash your programming potential with C. Join our flexible 30-session course, online or offline, and innovate for only Rs 3000!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20Learn%20C%20for%20Beginners%20-%2030%20Days.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fas fa-code"></i> Master C++ Fundamentals – 30 Days</h3>
+                    <img src="pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Laptop with C++ Code">
+                    <p>Step into C++ and shape your tech future. Master the basics in 30 sessions, online or offline, for Rs 3000!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20Master%20C++%20Fundamentals%20-%2030%20Days.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fas fa-code"></i> Combo Class: Learn C & C++ – 45 Days</h3>
+                    <img src="pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Programmer Working on Code">
+                    <p>Double your skills with our C and C++ combo course. Conquer both in 30 sessions for just Rs 3000, online or offline!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20Combo%20Class:%20Learn%20C%20%26%20C++%20-%2045%20Days.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fas fa-laptop-code"></i> Web Designing: HTML, CSS & JavaScript – 30 Days</h3>
+                    <img src="pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Web Design Interface">
+                    <p>Unleash your inner artist and craft stunning websites! Master HTML, CSS, and JavaScript in 30 sessions to create digital masterpieces. Join now for Rs 6000 and shine online!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20Web%20Designing:%20HTML,%20CSS%20%26%20JavaScript%20-%2030%20Days.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fas fa-desktop"></i> Ms-Office Automation – 30 Days</h3>
+                    <img src="pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="People Using Office Software">
+                    <p>Transform your productivity with Word, Excel, and PowerPoint expertise. Become a workplace star in 30 sessions for Rs 4500!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20Ms-Office%20Automation%20-%2030%20Days.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fas fa-database"></i> Learn PHP & MySQL – 30 Days</h3>
+                    <img src="pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="PHP and MySQL Code">
+                    <p>Build dynamic websites with PHP and MySQL. Our 30-session course, online or offline, sets you up for success at Rs 6000!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20Learn%20PHP%20%26%20MySQL%20-%2030%20Days.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fas fa-lightbulb"></i> 7 Days to a New You – Quantum Methods</h3>
+                    <img src="pexels-photo-3755440.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Person Meditating for Personal Growth">
+                    <p>Reimagine your future with powerful mindset techniques. Transform in just 5 sessions for only Rs 500!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%207%20Days%20to%20a%20New%20You%20-%20Quantum%20Methods.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="course">
+                    <h3><i class="fas fa-comment"></i> Speak English Confidently – 30 Days</h3>
+                    <img src="pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="People Practicing English Conversation">
+                    <p>Shine bright with fluent English! Our 45-session course for all ages helps you speak with confidence, opening new doors. Join today for Rs 4500!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20Speak%20English%20Confidently%20-%2030%20Days.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
             </div>
         </section>
         <section id="support">
-            <h2>Support Services</h2>
-            <div class="service">
-                <h3><i class="fas fa-file-alt"></i> College Research Paper Preparation</h3>
-                <p>Excel academically with expert guidance on research papers. Seamless support for Rs 100 per hour!</p>
-            </div>
-            <div class="service">
-                <h3><i class="fas fa-project-diagram"></i> CS & CA Mini & Major Projects</h3>
-                <p>Turn your CS projects into portfolio gems. Perfect for students ready to stand out!</p>
-            </div>
-            <div class="service">
-                <h3><i class="fas fa-check-circle"></i> EPF Claims & KYC Updating</h3>
-                <p>Simplify your EPFO needs with our hassle-free service for just Rs 200!</p>
-            </div>
-            <div class="service">
-                <h3><i class="fas fa-cogs"></i> OS Installation & Software Services</h3>
-                <p>Boost your device's performance with our expert PC and laptop solutions!</p>
+            <div class="services-container">
+                <h2>Discover Our Comprehensive Support Services</h2>
+                <div class="service">
+                    <h3><i class="fas fa-file-alt"></i> College Research Paper Preparation</h3>
+                    <img src="pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Person Writing Research Paper">
+                    <p>Excel academically with expert guidance on research papers. Seamless support for Rs 100 per hour!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20College%20Research%20Paper%20Preparation.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="service">
+                    <h3><i class="fas fa-project-diagram"></i> CS & CA Mini & Major Projects</h3>
+                    <img src="pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Team Working on Computer Projects">
+                    <p>Turn your CS projects into portfolio gems. Perfect for students ready to stand out!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20CS%20%26%20CA%20Mini%20%26%20Major%20Projects.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="service">
+                    <h3><i class="fas fa-check-circle"></i> EPF Claims & KYC Updating</h3>
+                    <img src="pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Administrative Documents">
+                    <p>Simplify your EPFO needs with our hassle-free service for just Rs 200!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20EPF%20Claims%20%26%20KYC%20Updating.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
+                <div class="service">
+                    <h3><i class="fas fa-cogs"></i> OS Installation & Software Services</h3>
+                    <img src="pexels-photo-159304.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=300" alt="Computer Repair and Software Installation">
+                    <p>Boost your device's performance with our expert PC and laptop solutions!</p>
+                    <a href="https://wa.me/918870211980?text=I%27m%20interested%20in%20OS%20Installation%20%26%20Software%20Services.%20Can%20you%20provide%20more%20details%3F" class="btn">Get More Details</a>
+                </div>
             </div>
         </section>
+        <section id="testimonials">
+            <div class="testimonials-container">
+                <h2>Hear from Our Successful Students</h2>
+                <div class="testimonial">
+                    <p>"Enrolling in the C & C++ combo course at Elshaddai Skill Centre was a game changer for me; the hands-on training and expert guidance not only enhanced my programming skills but also significantly boosted my confidence, ultimately helping me secure a job in the tech industry!"</p>
+                    <h4>- Izaq Hussain S., College Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Elshaddai Skill Centre made completing my research papers a seamless experience, providing support whenever I needed it."</p>
+                    <h4>- Raseen T., College Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I attended a 7-day workshop on MS Office 2013 that completely transformed my skills. Thanks to the comprehensive training, I feel confident in my abilities, and I’m excited to share that I landed a job right after completing the workshop! Highly recommend this program for anyone looking to enhance their MS Office expertise!"</p>
+                    <h4>- John Peter P., College Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"The Python course was a game-changer! I went from zero to building my own projects in just 30 days!"</p>
+                    <h4>- Jerin Wilkerson J., College Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I recently completed a 15-day workshop on MS Office 365 at Elshaddai Skill Centre, and it has been a game-changer for me. I learned not just the basics, but also developed my own unique way of formatting documents effectively. The hands-on training and supportive environment made all the difference. I highly recommend Elshaddai Skill Centre for anyone looking to enhance their skills!"</p>
+                    <h4>- NARENDHIRAN M., College Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I recently attended a C programming workshop at Elshaddai Skill Centre, and it has truly transformed my approach to coding. The program not only provided me with a solid foundation in C programming but also helped me develop my own unique way of tackling projects. The supportive instructors and practical exercises made the learning experience engaging and effective. I highly recommend Elshaddai Skill Centre to anyone looking to enhance their programming skills!"</p>
+                    <h4>- MAHALAKSHMI., College Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"The hands-on projects made learning fun and engaging; I can't believe how much I've achieved in just a month!"</p>
+                    <h4>- Prince Hoseenu A., College Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I never thought I could build anything meaningful in 30 days, but this course proved me wrong—I'm now confident in my skills."</p>
+                    <h4>- Raseen T., College Student</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Thanks to the English speaking course, I now express myself clearly and confidently!"</p>
+                    <h4>- Lakshaya R., 8th Grader</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"The English speaking course boosted my confidence. Now I present in class without fear!"</p>
+                    <h4>- Harish R., 6th Grader</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"The course provided practical skills that made me comfortable speaking in public settings."</p>
+                    <h4>- Mugilesh M., 3th Grader</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I've gained not just language skills, but the confidence to showcase my thoughts effectively."</p>
+                    <h4>- Amitesh M., 8th Grader</h4>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <h3>About Me</h3>
+            <p>I, Jason Paul, am a professional computer teacher working in a school, handling higher secondary students and teaching them extensively about computers and programming languages. I am very proud of my students who have completed schooling and are now pursuing college courses. Their continuous encouragement and support to start, and their desire to learn and explore programming languages and the fundamentals of computers, made me so much marvelled. In addition, all my friends, family, and relatives motivated me to launch these wonderful computer-related courses that are helpful and supportive for all categories, from kids to adults. Here, I empower students to master new computer skills of their choice, and with routine practice, I make them rock solid to face any challenge boldly.</p>
+            <h3>Our Mission</h3>
+            <p>My mission is to offer interested kids who are schooling and college students pursuing their courses the chance to dive into computers and programming languages at the lowest possible prices, with the best-suited courses for selection and the utmost convenience.</p>
+            <h3>Our Vision</h3>
+            <p>With the motto "Learn & Grow," my vision is to unleash one's capability to the fullest extent of their creativity and potential in technology and computers. I aim to equip them to target their desired career successfully, lighting their path from darkness to brilliance, and inspire learners to discover new techniques they can explore online on their own.</p>
+        </section>
         <section id="contact">
-            <h2>Contact Us</h2>
+            <h2>Get in Touch with Us</h2>
             <div class="contact-item"><i class="fas fa-user"></i> Owner/Tutor/Trainer: Jason Paul S</div>
             <div class="contact-item"><i class="fas fa-building"></i> Company: Elshaddai Skill Centre</div>
             <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Address: 7/3, 8th street, Sundaram Nagar, M C Road, Thanjavur-613004</div>
@@ -225,10 +421,16 @@
             <div class="contact-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/918870211980" target="_blank">WhatsApp</a></div>
             <div class="contact-item"><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/elsh.addaiskillcentre" target="_blank">Instagram</a></div>
             <div class="contact-item"><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/@elshaddaiskillcentre" target="_blank">YouTube</a></div>
+            <div class="contact-item"><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/@JasonPaulS" target="_blank">Jason Paul S YouTube</a></div>
         </section>
     </main>
     <footer>
         <p>© 2025 Elshaddai Skill Centre. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/elsh.addaiskillcentre" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@elshaddaiskillcentre" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.youtube.com/@JasonPaulS" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
     </footer>
 </body>
 </html>
