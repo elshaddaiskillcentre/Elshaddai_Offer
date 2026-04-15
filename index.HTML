@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El-Shaddai Skill Centre</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+
+body {margin:0;font-family:'Poppins',sans-serif;background:#f8fafc;}
+
+/* NAVBAR */
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 25px;
+  background:#111;
+}
+
+.logo img {
+  height:50px;
+  border-radius:8px;
+}
+
+.menu a {
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+  padding:8px 12px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.menu a:hover {
+  background:#4f46e5;
+}
+
+/* HERO */
+.hero {
+  text-align:center;padding:80px 20px;color:white;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('bgimg3.jpg');
+}
+.hero img {height:110px;}
+.highlight {color:#06b6d4;font-weight:bold;}
+
+/* SECTION */
+.section {
+  padding:50px 20px;
+  text-align:center;
+}
+
+.container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  width:270px;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-5px);
+}
+
+.btn {
+  background:linear-gradient(45deg,#4f46e5,#06b6d4);
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:25px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+/* FOOTER */
+.footer {
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+}
+
+#testimonials .card {
+  background: linear-gradient(135deg,#eef2ff,#ffffff);
+  border-left: 5px solid #4f46e5;
+}
+
+#testimonials p {
+  font-style: italic;
+  font-size: 14px;
+}
+
+#testimonials h4 {
+  margin-top:10px;
+  color:#4f46e5;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Elshaddai Skill Centre Logo">
+  </div>
+
+  <div class="menu">
+    <a href="#courses">Courses</a>
+    <a href="#kids">Kids</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="logo.png">
+  <h1>EL-SHADDAI SKILL CENTRE</h1>
+  <p>Learn • Practice • Grow • Succeed 🚀</p>
+<p class="highlight">🔥 Admissions Open – Limited Seats  </p>
+<p>🎓 Online & Offline Classes Available </p> 
+<p>📞 Call / WhatsApp Now</p>
+<button class="btn" onclick="enroll('General Enquiry')">Enroll Now</button>
+<p>⚠ Only 5 Seats Left in Current Batch</p>
+</div>
+<div class="section">
+
+<h2>Why Choose Us</h2>
+
+<p>✔ Experienced Computer Teacher</p>
+<p>✔ Individual Attention</p>
+<p>✔ Practical Training</p>
+<p>✔ 100+ Students Guided</p>
+
+</div>
+<!-- FOUNDATION COURSES -->
+<div class="section" id="courses">
+<h2>Foundation Courses</h2>
+
+<div class="container">
+
+<div class="card">
+<h3>C Programming</h3>
+<p>30 Sessions • ₹4999</p>
+<p>Build strong programming fundamentals.</p>
+<button class="btn" onclick="enroll('C Programming')">Enroll Now</button>
+</div>
+
+<div class="card">
+<h3>C++ Programming</h3>
+<p>30 Sessions • ₹5499</p>
+<p>Learn OOP concepts and advanced coding.</p>
+<button class="btn" onclick="enroll('C++ Programming')">Enroll Now</button>
+</div>
+
+<div class="card">
+<h3>Python</h3>
+<p>30 Sessions • ₹4999</p>
+<p>From basics to real-world applications.</p>
+<button class="btn" onclick="enroll('Python')">Enroll Now</button>
+</div>
+
+<div class="card">
+<h3>HTML Web Designing</h3>
+<p>30 Sessions • ₹5999</p>
+<p>Create modern websites from scratch.</p>
+<button class="btn" onclick="enroll('HTML Web Designing')">Enroll Now</button>
+</div>
+
+<div class="card">
+<h3>PHP with MySQL</h3>
+<p>30 Sessions • ₹6000</p>
+<p>Build dynamic web applications.</p>
+<button class="btn" onclick="enroll('PHP with MySQL')">Enroll Now</button>
+</div>
+
+<div class="card">
+<h3>MS Office Professional</h3>
+<p>30 Sessions • ₹5999</p>
+<p>Excel, Word & PowerPoint mastery.</p>
+<button class="btn" onclick="enroll('MS Office')">Enroll Now</button>
+</div>
+
+<div class="card">
+<h3>Spoken English</h3>
+<p>30 Sessions • ₹3999</p>
+<p>Improve communication & confidence.</p>
+<button class="btn" onclick="enroll('Spoken English')">Enroll Now</button>
+</div>
+
+</div>
+</div>
+
+<!-- KIDS -->
+<div class="section" id="kids">
+<h2>Kids Courses</h2>
+
+<div class="container">
+
+<div class="card">
+<h3>Phonics in Hindi</h3>
+<p>₹1500 • 16 Sessions</p>
+<button class="btn" onclick="enroll('Phonics in Hindi')">Enroll</button>
+</div>
+
+<div class="card">
+<h3>Maths Basics</h3>
+<p>₹1500 • 16 Sessions</p>
+<button class="btn" onclick="enroll('Maths Basics')">Enroll</button>
+</div>
+
+<div class="card">
+<h3>Calligraphy</h3>
+<p>₹1500 • 16 Sessions</p>
+<button class="btn" onclick="enroll('Calligraphy')">Enroll</button>
+</div>
+
+<div class="card">
+<h3>MS Paint</h3>
+<p>₹1499 • 15 Sessions</p>
+<button class="btn" onclick="enroll('MS Paint')">Enroll</button>
+</div>
+
+<div class="card">
+<h3>Canva</h3>
+<p>₹1199 • 15 Sessions</p>
+<button class="btn" onclick="enroll('Canva Course')">Enroll</button>
+</div>
+
+</div>
+</div>
+<div class="section" id="support">
+<h2>Student Support 📚</h2>
+
+<div class="container">
+
+<div class="card">
+<h3>11th & 12th Computer Tuition</h3>
+<p>Special coaching for Computer Science & Computer Applications (State Board). Focus on concepts, exams, and scoring high marks.</p>
+<p><b>16 Sessions • ₹2000 / Month</b></p>
+<button class="btn" onclick="enroll('11th & 12th Computer Tuition')">Enroll</button>
+</div>
+
+<div class="card">
+<h3>College Project Support</h3>
+<p>Get guidance for mini and major projects with proper coding and documentation. Ideal for final year students.</p>
+<p><b>Starts from ₹2000</b></p>
+<button class="btn" onclick="enroll('College Project Support')">Enroll</button>
+</div>
+
+<div class="card">
+<h3>Research Paper & SPSS Support</h3>
+<p>Complete assistance for research work including SPSS data analysis. Perfect for college students and final submissions.</p>
+<p><b>₹200 per session</b></p>
+<button class="btn" onclick="enroll('SPSS Research Support')">Enroll</button>
+</div>
+
+</div>
+</div>
+<!-- SERVICES -->
+<div class="section" id="services">
+<h2>Other Services</h2>
+
+<div class="container">
+
+<div class="card">
+<h3>EPF Claim</h3>
+<p>₹299</p>
+<button class="btn" onclick="enroll('EPF Service')">Enquire</button>
+</div>
+
+<div class="card">
+<h3>Aadhaar Update</h3>
+<p>₹199</p>
+<button class="btn" onclick="enroll('Aadhaar Update')">Enquire</button>
+</div>
+
+<div class="card">
+<h3>EB Bill Payment</h3>
+<p>₹75</p>
+<button class="btn" onclick="enroll('EB Bill Payment')">Enquire</button>
+</div>
+
+<div class="card">
+<h3>Laptop & PC Setup</h3>
+<p>Buy Smart + Installation & Setup</p>
+<button class="btn" onclick="enroll('Laptop Setup Service')">Enquire</button>
+</div>
+
+</div>
+</div>
+<div class="section" id="testimonials">
+<h2>Student Success Stories ⭐</h2>
+
+<div class="container">
+
+<div class="card">
+<p>"The C & C++ combo course was a game changer. It improved my skills and helped me get a job!"</p>
+<h4>– Izaq Hussain S., College Student</h4>
+</div>
+
+<div class="card">
+<p>"Python course took me from zero to building my own projects in just 30 days!"</p>
+<h4>– Jerin Wilkerson J.</h4>
+</div>
+
+<div class="card">
+<p>"MS Office training completely transformed my skills. I got placed right after the course!"</p>
+<h4>– John Peter P.</h4>
+</div>
+
+<div class="card">
+<p>"Hands-on projects made learning easy and engaging. I achieved more than I expected!"</p>
+<h4>– Prince Hoseenu A.</h4>
+</div>
+
+<div class="card">
+<p>"C programming training changed how I approach coding. Very practical and effective!"</p>
+<h4>– Mahalakshmi</h4>
+</div>
+
+<div class="card">
+<p>"English speaking course boosted my confidence. Now I speak without fear!"</p>
+<h4>– Harish R., School Student</h4>
+</div>
+
+<div class="card">
+<p>"I can now express myself clearly and confidently thanks to this training."</p>
+<h4>– Lakshaya R.</h4>
+</div>
+
+<div class="card">
+<p>"Support and guidance helped me complete my academic work easily."</p>
+<h4>– Raseen T.</h4>
+</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact</h2>
+<p>📍 7/3, 8th Street, Sundaram Nagar, Thanjavur</p>
+<p>📞 +91 8870211980</p>
+<a href="tel:+918870211980" class="btn">Call Now</a>
+</div>
+
+<div class="footer">
+© 2026 El-Shaddai Skill Centre
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/918870211980?text=Hi%20I%20am%20interested%20in%20your%20courses"
+class="whatsapp">💬</a>
+<i class="fab fa-whatsapp"></i>
+<script>
+function enroll(name){
+let msg = encodeURIComponent(
+"Hi, I am interested in the " + name + " at El-Shaddai Skill Centre. Please share details."
+);
+window.open("https://wa.me/918870211980?text=" + msg);
+}
+</script>
+
+</body>
+</html>
