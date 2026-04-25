@@ -70,7 +70,37 @@ background:rgba(255,255,255,0.08);
 padding:20px;margin:15px 0;border-radius:15px;
 border:1px solid rgba(255,255,255,0.2);
 }
+.sub-btn{
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+display:inline-block;
+}
 
+/* YouTube */
+.yt{
+background:#FF0000;
+}
+
+/* Instagram */
+.insta{
+background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);
+}
+
+/* WhatsApp */
+.wa{
+background:#25D366;
+}
+
+/* Hover */
+.sub-btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+  
 /* FORM */
 form{background:rgba(255,255,255,0.08);padding:20px;border-radius:15px;}
 input,select,textarea{width:100%;padding:10px;margin:10px 0;border:none;border-radius:8px;}
@@ -85,6 +115,29 @@ position:fixed;right:20px;padding:15px;border-radius:50%;
 .youtube{bottom:140px;background:#FF0000;}
 
 footer{text-align:center;padding:20px;background:rgba(0,0,0,0.4);}
+
+  /* TRUST SECTION */
+.trust-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.trust-box{
+background:rgba(255,255,255,0.08);
+padding:20px;
+border-radius:15px;
+width:250px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.2);
+transition:0.3s;
+}
+
+.trust-box:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(255,213,79,0.4);
+}
 </style>
   
 </head>
@@ -100,14 +153,42 @@ footer{text-align:center;padding:20px;background:rgba(0,0,0,0.4);}
 <p>Best Computer Training Centre in Thanjavur for Kids & Adults | Spoken English | Python | Web Designing</p>
 <button onclick="location.href='#enquiry'">Enroll Now</button>
 </div>
+<section id="trust">
+<h2>WHY CHOOSE ELSHADDAI SKILL CENTRE</h2>
 
+<div class="trust-container">
+
+<div class="trust-box">
+  <p><strong>Trusted by students and parents across Thanjavur</strong></p>
+<h3>🎓 1000+ Students Trained</h3>
+<p>Successfully trained students in computer skills, spoken English, and programming.</p>
+</div>
+
+<div class="trust-box">
+<h3>📜 Certified Courses</h3>
+<p>All courses come with completion certificates to boost your academic and career profile.</p>
+</div>
+
+<div class="trust-box">
+<h3>💡 Practical Learning</h3>
+<p>Hands-on training with real-time projects and daily practice sessions.</p>
+</div>
+
+<div class="trust-box">
+<h3>📞 Lifetime Support</h3>
+<p>Continuous guidance and WhatsApp support even after course completion.</p>
+</div>
+
+</div>
+
+</section>
 <nav>
 <a href="#kids-learning">Kids Learning</a>
 <a href="#kids-skills">Kids Skills</a>
 <a href="#adult-learning">Adult Learning</a>
-<a href="#skill-dev">Skill Development</a>
+<a href="#skill-dev">Adult Skill Development</a>
 <a href="#services">Services</a>
-<a href="#subscription">Subscription</a>
+<a href="#subscription">Subscription Support</a>
 <a href="#enquiry">Enquiry</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -196,7 +277,36 @@ Master web development in just 30 Sessions! 🚀 Our day-wise PHP & MySQL traini
 ⚡ EB Instant Payment Service ✅ TANGEDCO Bill Payment (Instant) ⚡ Quick & Hassle-Free Payment 🧾 Payment Confirmation Provided 📊 Process Time: Instant 💰 Service Charge: ₹75 🚀 Fast • Easy • Reliable</div>
 
 </section>
+<!-- ================= SUBSCRIPTION SUPPORT ================= -->
+  <section id="subscription">
+<h2>SUBSCRIPTION SUPPORT</h2>
 
+<div class="card">
+<p>Follow us on our platforms for updates, tutorials, and course information:</p>
+
+<div style="display:flex;flex-wrap:wrap;gap:15px;margin-top:15px;">
+
+<a href="https://www.youtube.com/@JasonPaulS" target="_blank" class="sub-btn yt">
+▶ YouTube - Jason Paul S
+</a>
+
+<a href="https://www.youtube.com/@elshaddaiskillcentre" target="_blank" class="sub-btn yt">
+▶ YouTube - Elshaddai Skill Centre
+</a>
+
+<a href="https://www.instagram.com/elsh.addaiskillcentre/?hl=en" target="_blank" class="sub-btn insta">
+📷 Instagram
+</a>
+
+<a href="https://wa.me/918870211980" target="_blank" class="sub-btn wa">
+💬 WhatsApp
+</a>
+
+</div>
+</div>
+
+</section>
+  
 <!-- ================= ENQUIRY ================= -->
 
 <section id="enquiry">
