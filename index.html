@@ -242,11 +242,11 @@ color:#FFD54F;
 <img src="logo.png" alt="Elshaddai Skill Centre Thanjavur Computer Training Institute" class="logo">
 </header>
 
-  <div style="background:#E53935;color:white;text-align:center;padding:10px;">
-⚡ Limited Seats Available | Next Batch Starting Soon – Enroll Today!
-    <p style="color:#FFD54F; font-weight:500; margin-top:10px;">
-⏰ 6 PM – 9 PM (Mon, Tue, Thu, Fri) + Appointment-based sessions
-</p>
+<div style="background:#E53935;color:white;text-align:center;padding:10px;">
+⚡ Limited Seats Available | Next Batch Starting Soon – Enroll Today!<br>
+<span style="color:#FFD54F; font-weight:500;">
+⏰ 6 PM – 9 PM (Mon, Tue, Thu, Fri) | Appointment-Based Sessions
+</span>
 </div>
   <div id="availability" style="
 background:#FFD54F;
@@ -262,7 +262,7 @@ Checking availability...
 <h1>Best Computer Training Centre in Thanjavur for Kids & Adults | Spoken English | Python | Web Designing | MS Office</h1>
 <button onclick="location.href='#enquiry'">Enroll Now</button>
   <p style="color:#FFD54F; font-weight:500; margin-top:10px;">
-🕒 Evening Batches: 6 PM – 9 PM | Flexible 1–2 Hour Sessions
+🕒 6 PM – 9 PM (Mon, Tue, Thu, Fri) | Flexible 1–2 Hour Sessions
 </p>
 </div>
 <div style="margin-top:15px;">
@@ -679,7 +679,7 @@ Trusted by 1000+ Students | 5-Star Rated Institute
 
 <div class="card">
 7/3, 8th Street, Sundaram Nagar, M C Road, Thanjavur - 613004<br><br>
-📞 +91 8870211980
+📞 +91 8870211980<br><br>
 
   🕒 <strong>Working Hours:</strong><br>
 6:00 PM – 9:00 PM (Monday, Tuesday, Thursday & Friday)<br><br>
@@ -734,7 +734,7 @@ width="100%" height="300" style="border-radius:10px;border:0;"></iframe>
     el.style.color = "#fff";
   } 
   else if (isWorkingDay) {
-    el.innerHTML = "🟡 Available Today (6 PM – 9 PM) – Book Your Slot";
+    el.innerHTML = "🟡 Available Today at 6 PM – Limited Slots, Book Now";
     el.style.background = "#FFD54F";
     el.style.color = "#000";
   } 
@@ -771,6 +771,8 @@ e.preventDefault();
 let text=`Name:${name.value}%0APhone:${phone.value}%0ACategory:${category.value}%0ACourse:${course.value}%0AMessage:${message.value}`;
 window.open(`https://wa.me/918870211980?text=${text}`,'_blank');
 }
+
+setInterval(updateAvailability, 60000);
 </script>
 
 </body>
