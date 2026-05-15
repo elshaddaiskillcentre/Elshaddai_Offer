@@ -691,6 +691,184 @@ box-shadow:
 0 0 20px rgba(255,20,147,0.25),
 0 10px 30px rgba(10,31,68,0.18);
 }
+  /* =========================
+   MODERN DROPDOWN NAVBAR
+========================= */
+
+.modern-nav{
+position:sticky;
+top:0;
+z-index:999;
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+padding:18px;
+
+background:rgba(255,255,255,0.72);
+backdrop-filter:blur(18px);
+
+border-radius:24px;
+
+margin:20px;
+
+box-shadow:
+0 10px 30px rgba(10,31,68,0.08);
+}
+
+/* DROPDOWN */
+
+.dropdown{
+position:relative;
+}
+
+/* MAIN BUTTON */
+
+.dropdown > a{
+display:flex;
+align-items:center;
+gap:8px;
+
+padding:14px 24px;
+
+text-decoration:none;
+font-weight:600;
+font-size:15px;
+
+border-radius:16px;
+
+color:#0a1f44;
+
+background:rgba(255,255,255,0.7);
+
+transition:0.45s;
+
+position:relative;
+overflow:hidden;
+}
+
+/* HOVER EFFECT */
+
+.dropdown > a:hover{
+background:
+linear-gradient(
+135deg,
+#0a1f44,
+#ff1493
+);
+
+color:#fff;
+
+transform:
+translateY(-5px)
+scale(1.05);
+
+box-shadow:
+0 12px 28px rgba(255,20,147,0.25),
+0 0 20px rgba(10,31,68,0.18);
+}
+
+/* DROPDOWN MENU */
+
+.dropdown-content{
+position:absolute;
+
+top:120%;
+left:0;
+
+min-width:250px;
+
+background:rgba(255,255,255,0.82);
+backdrop-filter:blur(18px);
+
+border-radius:20px;
+
+padding:12px;
+
+display:flex;
+flex-direction:column;
+gap:10px;
+
+opacity:0;
+visibility:hidden;
+
+transform:translateY(15px);
+
+transition:0.4s;
+
+box-shadow:
+0 15px 35px rgba(10,31,68,0.12);
+
+border:1px solid rgba(255,255,255,0.4);
+}
+
+/* SHOW MENU */
+
+.dropdown:hover .dropdown-content{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+/* SUBMENU LINKS */
+
+.dropdown-content a{
+text-decoration:none;
+
+padding:14px 18px;
+
+border-radius:14px;
+
+font-weight:500;
+
+color:#0a1f44;
+
+transition:0.35s;
+
+background:rgba(255,255,255,0.6);
+}
+
+/* SUBMENU HOVER */
+
+.dropdown-content a:hover{
+background:
+linear-gradient(
+135deg,
+#0a1f44,
+#ff1493
+);
+
+color:#fff;
+
+padding-left:24px;
+
+box-shadow:
+0 8px 20px rgba(255,20,147,0.22);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.modern-nav{
+gap:12px;
+padding:14px;
+}
+
+.dropdown-content{
+position:relative;
+top:10px;
+min-width:100%;
+}
+
+.dropdown > a{
+padding:12px 18px;
+font-size:14px;
+}
+
+}
 </style>
   
 </head>
@@ -822,18 +1000,81 @@ target="_blank" class="justdial-btn">
 📍 View Our Justdial Listing
 </a>
 </div>
-<nav>
-<a href="#kids-learning">Kids Learning</a>
-<a href="#kids-skills">Kids Skills</a>
-<a href="#adult-learning">Adult Learning</a>
-<a href="#skill-dev">Adult Skill Development</a>
-<a href="#services">Services</a>
-<a href="#subscription">Subscription Support</a>
-  <a href="#testimonials">Testimonials</a>
-<a href="#enquiry">Enquiry</a>
-<a href="#contact">Contact</a>
-</nav>
+<nav class="modern-nav">
 
+<!-- COURSES DROPDOWN -->
+<div class="dropdown">
+
+<a href="#">
+📘 Courses ▼
+</a>
+
+<div class="dropdown-content">
+
+<a href="#kids-learning">
+👦 Kids Learning
+</a>
+
+<a href="#kids-skills">
+🚀 Kids Skills
+</a>
+
+<a href="#adult-learning">
+🎓 Adult Learning
+</a>
+
+<a href="#skill-dev">
+💻 Skill Development
+</a>
+
+</div>
+</div>
+
+<!-- SERVICES -->
+<div class="dropdown">
+
+<a href="#">
+🛠 Services ▼
+</a>
+
+<div class="dropdown-content">
+
+<a href="#services">
+⚡ Our Services
+</a>
+
+<a href="#subscription">
+⭐ Subscription Support
+</a>
+
+</div>
+</div>
+
+<!-- STUDENT ZONE -->
+<div class="dropdown">
+
+<a href="#">
+💬 Student Zone ▼
+</a>
+
+<div class="dropdown-content">
+
+<a href="#testimonials">
+🌟 Testimonials
+</a>
+
+<a href="#enquiry">
+📩 Enquiry
+</a>
+
+<a href="#contact">
+📞 Contact
+</a>
+
+</div>
+</div>
+
+</nav>
 <!-- ================= FULL CONTENT ================= -->
 
 <section id="kids-learning">
