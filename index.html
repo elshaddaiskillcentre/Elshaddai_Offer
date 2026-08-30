@@ -2,6 +2,7 @@
 
 <html lang="en">
 <head>
+<meta name="description" content="Elshaddai Skill Centre Thanjavur offers practical career-focused courses for college students including Python, C, C++, Java, Web Designing, PHP with MySQL, MS Office, projects and research paper support. Book a course or ask for details.">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <meta charset="utf-8"/>
@@ -376,7 +377,7 @@ box-shadow:0 0 15px rgba(255,20,147,0.18);
 .whatsapp,
 .instagram,
 .youtube,
-.youtube2
+.youtube2,
   .demo-btn{
 position:fixed;
 right:20px;
@@ -1585,6 +1586,478 @@ footer{margin-top:0;}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important;}}
 </style>
+
+<style id="professional-alignment-fix">
+/* ===== PROFESSIONAL ALIGNMENT & CONTENT SYNC — FINAL OVERRIDES ===== */
+
+html { scroll-padding-top: 88px; }
+
+body {
+  line-height: 1.65;
+}
+
+/* Keep every major section visually centered and consistent */
+section,
+.hero {
+  width: min(1240px, calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero content hierarchy */
+.hero {
+  text-align: center;
+}
+.hero h1 {
+  text-wrap: balance;
+  margin-bottom: 16px !important;
+}
+.hero p {
+  text-wrap: balance;
+}
+.hero > div[style*="display:flex"] {
+  align-items: stretch !important;
+}
+.hero > div[style*="display:flex"] > a,
+.hero > div[style*="display:flex"] > button {
+  min-width: 170px;
+  min-height: 50px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Training-centre images stay equal in height */
+.hero > div:nth-of-type(2) {
+  display: flex !important;
+  gap: 14px !important;
+  align-items: stretch;
+}
+.hero > div:nth-of-type(2) img {
+  flex: 1 1 0;
+  width: 50% !important;
+  height: 280px !important;
+  min-height: 280px !important;
+  object-fit: cover;
+}
+
+/* Course/service card system */
+.professional-grid {
+  align-items: stretch;
+}
+.professional-grid > .card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  min-height: 0;
+  text-align: left;
+}
+.professional-grid > .card > .badge {
+  align-self: flex-end;
+  position: relative;
+  top: auto;
+  right: auto;
+  margin-bottom: 8px;
+}
+.professional-grid > .card > .enroll-btn {
+  margin-top: auto;
+  align-self: stretch;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.professional-grid > .card p {
+  margin-top: 10px;
+}
+.professional-grid > .card br + .enroll-btn {
+  margin-top: auto;
+}
+
+/* Make the two-card Adult Learning section balanced */
+#adult-learning > .card {
+  min-height: 250px;
+}
+
+/* FAQ cards: equal height + clean question/answer spacing */
+#faq > .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  min-height: 210px;
+  text-align: left;
+}
+#faq > .card b {
+  display: block;
+  font-size: 16px;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  color: var(--brand-navy, #0a1f44);
+}
+#faq > .card p {
+  margin: 0;
+}
+
+/* Stats and trust boxes */
+#stats .trust-container,
+#trust .trust-container {
+  align-items: stretch;
+}
+#stats .trust-box,
+#trust .trust-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 !important;
+}
+#trust .trust-box {
+  min-height: 190px;
+  text-align: center;
+}
+
+/* Reviews and testimonials */
+.review-container,
+.testimonial-container {
+  align-items: stretch;
+}
+.review-card,
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.review-card p,
+.testimonial-card p {
+  flex: 1;
+}
+.review-card span,
+.testimonial-card h4 {
+  margin-top: 16px;
+}
+
+/* Subscription buttons */
+.community-section .card > div {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px !important;
+}
+.community-section .sub-btn {
+  width: 100%;
+  min-height: 50px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 !important;
+}
+
+/* Enquiry form */
+.conversion-section {
+  width: min(1000px, calc(100% - 32px));
+}
+.conversion-section form {
+  width: 100%;
+}
+.conversion-section input,
+.conversion-section select,
+.conversion-section textarea,
+.conversion-section button {
+  display: block;
+  width: 100%;
+}
+.conversion-section textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.conversion-section button {
+  min-height: 52px;
+  margin-top: 8px;
+}
+
+/* Contact buttons: same height and professional alignment */
+#contact > div[style*="text-align:center"] {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+#contact > div[style*="text-align:center"] a {
+  margin: 0 !important;
+  min-height: 50px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact/map cards */
+.final-section > .card {
+  height: auto;
+}
+.final-section iframe {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+}
+
+/* Buttons: consistent sizing, no accidental text wrapping */
+.enroll-btn,
+.review-btn,
+.justdial-btn,
+.sub-btn,
+.menu-cta,
+button {
+  line-height: 1.25;
+  white-space: normal;
+}
+.enroll-btn,
+.review-btn,
+.justdial-btn,
+.sub-btn {
+  text-align: center;
+}
+
+/* Fix the accidental selector issue in the original floating-icon block */
+.whatsapp,
+.instagram,
+.youtube,
+.youtube2 {
+  position: fixed;
+}
+
+/* Better mobile alignment */
+@media (max-width: 900px) {
+  .professional-grid > .card,
+  #faq > .card {
+    grid-column: span 6;
+  }
+
+  .community-section .card > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero > div:nth-of-type(2) img {
+    height: 230px !important;
+    min-height: 230px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  section,
+  .hero,
+  .conversion-section {
+    width: calc(100% - 20px);
+  }
+
+  .hero > div[style*="display:flex"] > a,
+  .hero > div[style*="display:flex"] > button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero > div:nth-of-type(2) {
+    flex-direction: column !important;
+  }
+
+  .hero > div:nth-of-type(2) img {
+    width: 100% !important;
+    height: 210px !important;
+    min-height: 210px !important;
+  }
+
+  .professional-grid > .card,
+  #faq > .card {
+    grid-column: 1 / -1;
+  }
+
+  #adult-learning > .card {
+    min-height: 0;
+  }
+
+  .community-section .card > div {
+    grid-template-columns: 1fr;
+  }
+
+  #contact > div[style*="text-align:center"] {
+    grid-template-columns: 1fr;
+  }
+
+  #stats .trust-box,
+  #trust .trust-box {
+    min-height: 150px;
+  }
+
+  .professional-grid > .card > .enroll-btn {
+    width: 100%;
+  }
+}
+
+/* Prevent hover transforms from causing button/card visual misalignment */
+@media (hover:hover) {
+  .professional-grid > .card:hover {
+    transform: translateY(-6px) !important;
+  }
+}
+</style>
+
+
+<style id="college-conversion-enhancement">
+/* ===== COLLEGE STUDENT REACH + BOOKING SECTION ===== */
+.college-conversion-section {
+  width: min(1240px, calc(100% - 32px));
+  margin: 32px auto;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a1f44 0%, #132e63 55%, #ff1493 140%);
+  color: #fff;
+  box-shadow: 0 18px 55px rgba(10,31,68,.18);
+}
+.college-conversion-inner {
+  max-width: 1160px;
+  margin: auto;
+  padding: 46px 30px;
+  text-align: center;
+}
+.college-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.28);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+.college-conversion-section h2 {
+  color: #fff;
+  margin: 15px auto 10px;
+  text-wrap: balance;
+}
+.college-lead {
+  max-width: 800px;
+  margin: 0 auto 28px;
+  opacity: .94;
+  font-size: 17px;
+}
+.college-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 16px;
+  text-align: left;
+}
+.college-benefit-card {
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 18px;
+  padding: 22px 18px;
+  min-height: 190px;
+  backdrop-filter: blur(8px);
+}
+.college-icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+.college-benefit-card h3 {
+  color: #fff;
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+.college-benefit-card p {
+  margin: 0;
+  opacity: .9;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.college-course-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin: 24px 0 22px;
+}
+.college-course-strip strong,
+.college-course-strip span {
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.2);
+  font-size: 13px;
+}
+.college-course-strip strong {
+  background: #fff;
+  color: #0a1f44;
+}
+.college-cta-row {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 12px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+.college-primary-cta,
+.college-secondary-cta {
+  min-height: 54px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  line-height: 1.2;
+  transition: .25s ease;
+}
+.college-primary-cta {
+  background: #fff;
+  color: #0a1f44;
+}
+.college-secondary-cta {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+}
+.college-primary-cta:hover,
+.college-secondary-cta:hover {
+  transform: translateY(-3px);
+}
+.college-urgency {
+  margin: 18px 0 0;
+  font-size: 13px;
+  opacity: .88;
+}
+@media (max-width: 900px) {
+  .college-benefit-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+  .college-cta-row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .college-conversion-section {
+    width: calc(100% - 20px);
+    border-radius: 22px;
+  }
+  .college-conversion-inner {
+    padding: 34px 16px;
+  }
+  .college-benefit-grid {
+    grid-template-columns: 1fr;
+  }
+  .college-benefit-card {
+    min-height: 0;
+  }
+  .college-lead {
+    font-size: 15px;
+  }
+}
+</style>
+
 </head>
 <body id="top">
 <div id="loader">
@@ -1687,6 +2160,7 @@ font-weight:500;">
 <a class="menu-link" href="#testimonials">💬 Student Zone <span>⌄</span></a>
 <div class="dropdown-content">
 <a href="#testimonials">🌟 Testimonials</a>
+<a href="#college-students">🎓 College Students</a>
 <a href="#enquiry">📩 Enquiry</a>
 <a href="#contact">📞 Contact</a>
 </div>
@@ -2110,7 +2584,56 @@ Trusted by 1000+ Students | 5-Star Rated Institute
 <h4>– Raseen T.</h4>
 </div>
 </div>
-</section><section class="community-section" id="subscription">
+</section>
+<section class="college-conversion-section" id="college-students">
+  <div class="college-conversion-inner">
+    <span class="college-badge">🎓 COLLEGE STUDENTS — CAREER SKILLS</span>
+    <h2>BUILD JOB-READY SKILLS WHILE YOU STUDY</h2>
+    <p class="college-lead">
+      Practical computer training for college students who want stronger programming,
+      project, research, communication and workplace skills.
+    </p>
+
+    <div class="college-benefit-grid">
+      <div class="college-benefit-card">
+        <div class="college-icon">💻</div>
+        <h3>Programming Skills</h3>
+        <p>Python, C, C++, Java, PHP with MySQL and Web Designing foundation courses.</p>
+      </div>
+      <div class="college-benefit-card">
+        <div class="college-icon">📊</div>
+        <h3>Project & Research Support</h3>
+        <p>College mini & major projects and research paper power sessions with practical guidance.</p>
+      </div>
+      <div class="college-benefit-card">
+        <div class="college-icon">📄</div>
+        <h3>MS Office for Careers</h3>
+        <p>Build professional skills in Word, Excel, PowerPoint, reports, charts and presentations.</p>
+      </div>
+      <div class="college-benefit-card">
+        <div class="college-icon">🗣️</div>
+        <h3>Communication Skills</h3>
+        <p>Improve spoken English, confidence and communication for interviews and everyday professional situations.</p>
+      </div>
+    </div>
+
+    <div class="college-course-strip">
+      <strong>🔥 POPULAR WITH COLLEGE STUDENTS</strong>
+      <span>Python</span><span>C / C++</span><span>Java</span><span>Web Designing</span>
+      <span>PHP + MySQL</span><span>MS Office</span><span>Projects</span><span>Research Paper</span>
+    </div>
+
+    <div class="college-cta-row">
+      <a class="college-primary-cta" href="#enquiry">🎯 BOOK YOUR COURSE</a>
+      <a class="college-secondary-cta" href="https://wa.me/918870211980" target="_blank">💬 ASK COURSE DETAILS</a>
+      <a class="college-secondary-cta" href="tel:+918870211980">📞 TALK TO US</a>
+    </div>
+
+    <p class="college-urgency">⚡ Limited slots • Evening batches • Appointment-based sessions • Practical training</p>
+  </div>
+</section>
+
+<section class="community-section" id="subscription">
 <h2>SUBSCRIPTION SUPPORT</h2>
 <div class="card">
 <p>Follow us on our platforms for updates, tutorials, and course information:</p>
