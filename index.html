@@ -2,14 +2,14 @@
 
 <html lang="en">
 <head>
-<meta name="description" content="Elshaddai Skill Centre Thanjavur offers practical career-focused courses for college students including Python, C, C++, Java, Web Designing, PHP with MySQL, MS Office, projects and research paper support. Book a course or ask for details.">
+<meta content="Elshaddai Skill Centre Thanjavur offers practical career-focused courses for college students including Python, C, C++, Java, Web Designing, PHP with MySQL, MS Office, projects and research paper support. Book a course or ask for details." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<meta charset="utf-8"/>
+<meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Best Computer Training Centre in Thanjavur | Spoken English, Python, Web Designing,Java,C and C++ Programming | Elshaddai Skill Centre</title>
 <!-- BASIC SEO -->
-<meta content="Best Computer Training Centre in Thanjavur. Kids learning, Spoken English, Python, Web Designing, Java, C, C++, Java ,MS Office and Skill Development Courses." name="description"/>
+<meta content="Best Computer Training Centre in Thanjavur. Kids learning, Spoken English, Python, Web Designing, C, C++, Java ,MS Office and Skill Development Courses." name="description"/>
 <meta content="computer classes Thanjavur, spoken English Thanjavur, python course Thanjavur, kids learning centre Thanjavur, web designing course Thanjavur,java, c programming, c++ programming" name="keywords"/>
 <meta content="Elshaddai Skill Centre" name="author"/>
 <!-- OPEN GRAPH (WhatsApp / Facebook sharing) -->
@@ -1585,8 +1585,141 @@ footer{margin-top:0;}
   .priority-section .trust-box{min-height:auto;}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important;}}
-</style>
 
+/* === Premium Fee & Service Fee Styling === */
+.fee-highlight,
+.service-fee-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin: .55rem 0;
+  padding: .55rem .9rem;
+  border-radius: 14px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: .01em;
+  box-shadow: 0 5px 18px rgba(0,0,0,.10);
+  vertical-align: middle;
+}
+.fee-highlight {
+  background: linear-gradient(135deg,#fff7d6,#ffd75a);
+  border: 2px solid #d89b00;
+  color: #4d3300;
+}
+.service-fee-highlight {
+  background: linear-gradient(135deg,#eef7ff,#b9dcff);
+  border: 2px solid #3b82c4;
+  color: #123b5c;
+}
+.fee-highlight .fee-label,
+.service-fee-highlight .fee-label {
+  font-size: .72rem;
+  text-transform: uppercase;
+  opacity: .78;
+  letter-spacing: .08em;
+}
+.fee-highlight .fee-amount,
+.service-fee-highlight .fee-amount {
+  font-size: 1.15rem;
+  font-weight: 950;
+  white-space: nowrap;
+}
+.fee-highlight .fee-icon,
+.service-fee-highlight .fee-icon {
+  font-size: 1.15rem;
+}
+.course-card .fee-highlight,
+.course-card .service-fee-highlight,
+.card .fee-highlight,
+.card .service-fee-highlight {
+  width: fit-content;
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  .fee-highlight,
+  .service-fee-highlight {
+    padding: .48rem .72rem;
+    gap: .4rem;
+    border-radius: 12px;
+  }
+  .fee-highlight .fee-amount,
+  .service-fee-highlight .fee-amount {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* Normalize all legacy pricing components to the premium fee system */
+.course-fee {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin: .55rem 0;
+  padding: .55rem .9rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#fff7d6,#ffd75a);
+  border: 2px solid #d89b00;
+  color: #4d3300;
+  font-weight: 800;
+  line-height: 1.15;
+  box-shadow: 0 5px 18px rgba(0,0,0,.10);
+  vertical-align: middle;
+}
+.course-fee::before { content: "💰"; font-size: 1.15rem; }
+.course-fee .fee-label {
+  font-size: .72rem;
+  text-transform: uppercase;
+  opacity: .78;
+  letter-spacing: .08em;
+}
+.course-fee .fee-value {
+  font-size: 1.15rem;
+  font-weight: 950;
+  white-space: nowrap;
+}
+.service-charge,
+.service-fee {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin: .55rem 0;
+  padding: .55rem .9rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#eef7ff,#b9dcff);
+  border: 2px solid #3b82c4;
+  color: #123b5c;
+  font-weight: 800;
+  line-height: 1.15;
+  box-shadow: 0 5px 18px rgba(0,0,0,.10);
+  vertical-align: middle;
+}
+.service-charge::before,
+.service-fee::before { content: "🛠️"; font-size: 1.15rem; }
+.service-charge .fee-label,
+.service-fee .fee-label {
+  font-size: .72rem;
+  text-transform: uppercase;
+  opacity: .78;
+  letter-spacing: .08em;
+}
+.service-charge .fee-value,
+.service-fee .fee-value {
+  font-size: 1.15rem;
+  font-weight: 950;
+  white-space: nowrap;
+}
+@media (max-width:600px) {
+  .course-fee,.service-charge,.service-fee {
+    padding:.48rem .72rem;
+    gap:.4rem;
+    border-radius:12px;
+  }
+  .course-fee .fee-value,.service-charge .fee-value,.service-fee .fee-value {
+    font-size:1.05rem;
+  }
+}
+
+</style>
 <style id="professional-alignment-fix">
 /* ===== PROFESSIONAL ALIGNMENT & CONTENT SYNC — FINAL OVERRIDES ===== */
 
@@ -1901,8 +2034,6 @@ button {
   }
 }
 </style>
-
-
 <style id="college-conversion-enhancement">
 /* ===== COLLEGE STUDENT REACH + BOOKING SECTION ===== */
 .college-conversion-section {
@@ -2057,7 +2188,6 @@ button {
   }
 }
 </style>
-
 <style id="performance-final">
 /* Performance + rendering stability */
 .reveal-on-scroll{opacity:0;transform:translate3d(0,24px,0);transition:opacity .45s ease,transform .45s ease;will-change:opacity,transform;}
@@ -2070,13 +2200,18 @@ img{max-width:100%;height:auto;}
 iframe{max-width:100%;}
 @media (prefers-reduced-motion:reduce){.reveal-on-scroll{opacity:1;transform:none;transition:none;will-change:auto;}}
 </style>
-</head>
+<style id="premium-fee-highlights">
+.card .course-fee{display:inline-flex;align-items:center;gap:7px;margin:14px 0 10px;padding:9px 14px;border-radius:12px;background:linear-gradient(135deg,#fff7cc,#ffd54f);color:#0a1f44;border:2px solid rgba(255,193,7,.55);box-shadow:0 6px 18px rgba(10,31,68,.12);font-size:16px;font-weight:900;line-height:1.2}
+.card .course-fee .fee-label{font-size:11px;text-transform:uppercase;letter-spacing:.7px;opacity:.72;font-weight:800}.card .course-fee .fee-value{font-size:20px;font-weight:950}.card .course-fee::before{content:'💰';font-size:18px}
+@media(max-width:600px){.card .course-fee{width:100%;justify-content:center;box-sizing:border-box}.card .course-fee .fee-value{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.card .course-fee{box-shadow:none}}
+</style></meta></head>
 <body id="top">
 <div id="loader">
 <h2>Elshaddai Skill Centre</h2>
 </div>
 <header>
-<img alt="Elshaddai Skill Centre Thanjavur Computer Training Institute" class="logo" src="logo.png" decoding="async" fetchpriority="high"/>
+<img alt="Elshaddai Skill Centre Thanjavur Computer Training Institute" class="logo" decoding="async" fetchpriority="high" src="logo.png"/>
 </header>
 <div style="background:#E53935;color:white;text-align:center;padding:10px;">
 ⚡ Limited Seats Available | Next Batch Starting Soon – Enroll Today!<br/>
@@ -2108,7 +2243,7 @@ Best Computer Training Centre in Thanjavur | Python, Spoken English, C, C++,Java
 <button onclick="location.href='#enquiry'">
 🎯 Enroll Now
 </button>
-<a class="enroll-btn" href="https://wa.me/918870211980" target="_blank" rel="noopener noreferrer">
+<a class="enroll-btn" href="https://wa.me/918870211980" rel="noopener noreferrer" target="_blank">
 💬 WhatsApp Us
 </a>
 <a class="enroll-btn" href="tel:+918870211980">
@@ -2116,8 +2251,8 @@ Best Computer Training Centre in Thanjavur | Python, Spoken English, C, C++,Java
 </a>
 </div>
 <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:20px;">
-<img alt="Elshaddai Skill Centre building in Thanjavur" src="elshaddai-training-centre-thanjavur.jpg" loading="eager" decoding="async" fetchpriority="high" style="width:48%; border-radius:12px;"/>
-<img alt="Outside view of Elshaddai training centre Thanjavur" src="elshaddai-training-centre-thanjavur-1.jpg" loading="lazy" decoding="async" style="width:48%; border-radius:12px;"/>
+<img alt="Elshaddai Skill Centre building in Thanjavur" decoding="async" fetchpriority="high" loading="eager" src="elshaddai-training-centre-thanjavur.jpg" style="width:48%; border-radius:12px;"/>
+<img alt="Outside view of Elshaddai training centre Thanjavur" decoding="async" loading="lazy" src="elshaddai-training-centre-thanjavur-1.jpg" style="width:48%; border-radius:12px;"/>
 </div>
 <p style="font-size:13px; opacity:0.8; margin-top:8px; text-align:center;">
 📍 Our Training Centre – Sundaram Nagar, Thanjavur
@@ -2134,11 +2269,8 @@ text-decoration:none;
 font-weight:500;">
 📞 Call Now
 </a>
-
-
-
 <div style="text-align:center;margin-top:10px;">
-<a class="justdial-btn" href="https://www.justdial.com/Thanjavur/Elshaddai-Skill-Centre-Near-Ration-Shop-Sundram-Nagar-Sundram-Nagar/9999P4362-4362-230613145440-K9P2_BZDET" target="_blank" rel="noopener noreferrer">
+<a class="justdial-btn" href="https://www.justdial.com/Thanjavur/Elshaddai-Skill-Centre-Near-Ration-Shop-Sundram-Nagar-Sundram-Nagar/9999P4362-4362-230613145440-K9P2_BZDET" rel="noopener noreferrer" target="_blank">
 📍 View Our Justdial Listing
 </a>
 </div>
@@ -2181,35 +2313,25 @@ font-weight:500;">
 </div>
 </nav>
 <!-- ================= FULL CONTENT ================= -->
-
-
-
-
-
 <!-- ================= SUBSCRIPTION SUPPORT ================= -->
-
 <!-- ================= TESTIMONIALS ================= -->
-
 <!-- ================= ENQUIRY ================= -->
-
-
 <!-- CONTACT -->
-
 <footer>
 <h3>Elshaddai Skill Centre</h3>
 <p>
 Best Computer Training Centre in Thanjavur
 </p>
 <div style="margin-top:15px;">
-<a href="https://wa.me/918870211980" target="_blank" rel="noopener noreferrer">
+<a href="https://wa.me/918870211980" rel="noopener noreferrer" target="_blank">
 WhatsApp
 </a> |
 
-<a href="https://www.instagram.com/elsh.addaiskillcentre/" target="_blank" rel="noopener noreferrer">
+<a href="https://www.instagram.com/elsh.addaiskillcentre/" rel="noopener noreferrer" target="_blank">
 Instagram
 </a> |
 
-<a href="https://www.youtube.com/@elshaddaiskillcentre" target="_blank" rel="noopener noreferrer">
+<a href="https://www.youtube.com/@elshaddaiskillcentre" rel="noopener noreferrer" target="_blank">
 YouTube
 </a>
 </div>
@@ -2217,13 +2339,11 @@ YouTube
 © 2026 Elshaddai Skill Centre
 </p>
 </footer>
-<a class="whatsapp" href="https://wa.me/918870211980" target="_blank" rel="noopener noreferrer">💬</a>
+<a class="whatsapp" href="https://wa.me/918870211980" rel="noopener noreferrer" target="_blank">💬</a>
 <a class="demo-btn" href="#enquiry">🎯 Free Demo</a>
-<a class="instagram" href="https://www.instagram.com/elsh.addaiskillcentre/?hl=en" target="_blank" rel="noopener noreferrer">📷</a>
-<a class="youtube" href="https://www.youtube.com/@elshaddaiskillcentre" target="_blank" rel="noopener noreferrer">▶</a>
-<a class="youtube2" href="https://www.youtube.com/@JasonPaulS" target="_blank" rel="noopener noreferrer">▶</a>
-
-
+<a class="instagram" href="https://www.instagram.com/elsh.addaiskillcentre/?hl=en" rel="noopener noreferrer" target="_blank">📷</a>
+<a class="youtube" href="https://www.youtube.com/@elshaddaiskillcentre" rel="noopener noreferrer" target="_blank">▶</a>
+<a class="youtube2" href="https://www.youtube.com/@JasonPaulS" rel="noopener noreferrer" target="_blank">▶</a>
 <section class="priority-section" id="stats">
 <div class="trust-container">
 <div class="trust-box">
@@ -2232,7 +2352,7 @@ YouTube
 </div>
 <div class="trust-box">
 <h2>12+ </h2>
-  <h4>and more</h4>
+<h4>and more</h4>
 <p>Courses Available</p>
 </div>
 <div class="trust-box">
@@ -2268,53 +2388,53 @@ YouTube
 </section><section class="professional-grid" id="kids-learning">
 <h2>KIDS LEARNING ZONE</h2>
 <div class="card"> <span class="badge">POPULAR</span> <br/>📚 PHONICS IN HINDI (READ &amp; WRITE)  STANDARD - 1 TO 5 <br/><br/>
-Helps students learn Hindi reading &amp; writing using phonics. Kids will learn letter sounds, word formation, and sentence reading with step-by-step writing practice. 16 Sessions 💰 ₹1,500 🎯 Class 1 to 5 <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a> </div>
+Helps students learn Hindi reading &amp; writing using phonics. Kids will learn letter sounds, word formation, and sentence reading with step-by-step writing practice. 16 Sessions <span class="fee-highlight"><span class="fee-icon">💰</span><span class="fee-label">Course Fee</span><span class="fee-amount">₹1,500</span></span>🎯 Class 1 to 5 <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a> </div>
 <div class="card"> <span class="badge">TRENDING</span> <br/>📚 CALLIGRAPHY FOR KIDS - STANDARD 1 TO 5 <br/><br/>
-Helps students improve handwriting with neat and stylish writing techniques. Kids learn letter formation, spacing, strokes, and beautiful presentation skills through guided practice.  16 Sessions 💰 ₹1,500 🎯 Class 1 to 5 <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+Helps students improve handwriting with neat and stylish writing techniques. Kids learn letter formation, spacing, strokes, and beautiful presentation skills through guided practice.  16 Sessions <span class="fee-highlight"><span class="fee-icon">💰</span><span class="fee-label">Course Fee</span><span class="fee-amount">₹1,500</span></span>🎯 Class 1 to 5 <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">TUITION-SUPPORT</span> <br/>📚 MATHS BASICS (SYLLABUS BASED)  - STANDARD 1 TO 5 <br/><br/>
-Helps students build strong fundamentals in maths as per school syllabus. Kids learn numbers, basic operations, problem-solving, and concepts with simple and step-by-step methods.  16 Sessions 💰 ₹1,500 🎯 Class 1 to 5 <br/><a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+Helps students build strong fundamentals in maths as per school syllabus. Kids learn numbers, basic operations, problem-solving, and concepts with simple and step-by-step methods.  16 Sessions <span class="fee-highlight"><span class="fee-icon">💰</span><span class="fee-label">Course Fee</span><span class="fee-amount">₹1,500</span></span>🎯 Class 1 to 5 <br/><a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 </section><section class="professional-grid" id="kids-skills">
 <h2>KIDS SKILL PROGRAMS</h2>
 <div class="card"> <span class="badge">MOST POPULAR</span><br/>MS-OFFICE FOR BASICS <br/><br/>
-💻 Master MS-Office in 30 Sessions ! 📊 Word | Excel | PowerPoint from Basics 🔥 Daily Practice + Mini Projects + Final Presentation 🎯 Perfect for Students &amp; Beginners 🏆 Certificate on Completion 💡 Offline: ₹4,999 | Online: ₹2,999 ⚡ Limited Seats  <br/><a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+💻 Master MS-Office in 30 Sessions ! 📊 Word | Excel | PowerPoint from Basics 🔥 Daily Practice + Mini Projects + Final Presentation 🎯 Perfect for Students &amp; Beginners 🏆 Certificate on Completion <span class="course-fee"><span class="fee-label">Offline</span><span class="fee-value">₹5,000</span></span> <span class="course-fee"></span> ⚡ Limited Seats  <br/><a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">KIDS CHOICE</span><br/>MS PAINT COURSE FOR KIDS <br/><br/>
-🎨 MS Paint Course for Kids – Fun Learning in 15 Sessions! 🖌️ Drawing | Coloring | Digital Art Projects 👧 For Class 3–8 | Daily Creative Practice 🌈 15 Fun Projects + Artwork Showcase 🏆 Certificate + Parent Feedback 💰 Fee: ₹1,499 ⚡ Limited Seats <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a> </div>
+🎨 MS Paint Course for Kids – Fun Learning in 15 Sessions! 🖌️ Drawing | Coloring | Digital Art Projects 👧 For Class 3–8 | Daily Creative Practice 🌈 15 Fun Projects + Artwork Showcase 🏆 Certificate + Parent Feedback <span class="course-fee"><span class="fee-label">Course Fee</span><span class="fee-value">₹1,500</span></span> ⚡ Limited Seats <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a> </div>
 <div class="card"> <span class="badge">VERY POPULAR</span><br/>SPEAK ENGLISH CONFIDENTLY FOR KIDS <br/><br/>
-🗣️ Speak English Confidently in 30 Sessions! 🔥 Daily Speaking Practice + Real Conversations 🎯 Interviews | Exams | Daily Communication 💬 30 Topics + Pronunciation Training 🏆 Certificate + Speaking Portfolio 💡 Lifetime WhatsApp Doubt Support 💰 Course Fee: ₹3,999 ⚡ Limited Seats <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+🗣️ Speak English Confidently in 30 Sessions! 🔥 Daily Speaking Practice + Real Conversations 🎯 Interviews | Exams | Daily Communication 💬 30 Topics + Pronunciation Training 🏆 Certificate + Speaking Portfolio 💡 Lifetime WhatsApp Doubt Support <span class="course-fee"><span class="fee-label">Course Fee</span><span class="fee-value">₹4,000</span></span> ⚡ Limited Seats <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">MOST POPULAR </span><br/>CANVA FREE VERSION BASICS FOR KIDS <br/><br/>
-🎨 Canva for Kids – Create Like a Designer in 15 Sessions! 🖼️ Posters | Cards | Social Media Designs 👧 Class 4–8 | Fun Daily Creative Projects ✨ 15 Ready-to-Print Designs 🏆 Certificate + Project Showcase 💰 Fee: ₹1,199 ⚡ Limited Seats — Join Now &amp; Start Designing! <br/><a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+🎨 Canva for Kids – Create Like a Designer in 15 Sessions! 🖼️ Posters | Cards | Social Media Designs 👧 Class 4–8 | Fun Daily Creative Projects ✨ 15 Ready-to-Print Designs 🏆 Certificate + Project Showcase <span class="course-fee"><span class="fee-label">Course Fee</span><span class="fee-value">₹1,200</span></span> ⚡ Limited Seats — Join Now &amp; Start Designing! <br/><a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 </section><section class="professional-grid" id="adult-learning">
 <h2>ADULT LEARNING ZONE</h2>
-<div class="card"> <span class="badge">MOST TRENDING</span><br/>🚨 11th &amp; 12th Computer Science Tuition Started! 💻 Computer Science &amp; Computer Application 📍 El Shaddai Skill Centre 🔥 ₹2000 / Month | 16 Sessions | 1 Hr Each 🎯 Easy Teaching | Exam Focus | High Marks ⚡ Limited Seats <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
-<div class="card"> <span class="badge">POPULAR</span><br/>📄 College Research Paper Power Sessions! 🎯 Paper Preparation &amp; Submission Methods 📊 SPSS Tools Support Included 💡 Expert Guidance to Impress Professors ⚡ 1 Hour Power Session 💰 Only ₹200 / Hour 🚀 Limited Slots <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+<div class="card"> <span class="badge">MOST TRENDING</span><br/>🚨 11th &amp; 12th Computer Science Tuition Started! 💻 Computer Science &amp; Computer Application 📍 El Shaddai Skill Centre 🔥 <span class="course-fee"><span class="fee-label">Monthly Fee</span><span class="fee-value">₹2000/Month</span></span> | 16 Sessions | 1 Hr Each 🎯 Easy Teaching | Exam Focus | High Marks ⚡ Limited Seats <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+<div class="card"> <span class="badge">POPULAR</span><br/>📄 College Research Paper Power Sessions! 🎯 Paper Preparation &amp; Submission Methods 📊 SPSS Tools Support Included 💡 Expert Guidance to Impress Professors ⚡ 1 Hour Power Session 💰 <span class="course-fee"><span class="fee-label">Session Fee</span><span class="fee-value">₹200/Hour</span></span> 🚀 Limited Slots <br/> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 </section><section class="professional-grid" id="skill-dev">
 <h2>ADULT SKILL DEVELOPMENT ZONE</h2>
 <div class="card"> <span class="badge">MOST POPULAR</span><br/>🐍 PYTHON BASICS FOUNDATION COURSE<br/><br/>
-🚀 Become a Python Pro in 30 Sessions! 🔥 Daily Coding | 5 Mini Projects | Real-World Skills 💡 From Basics to File Handling, Projects &amp; Final Assessment 🎯 Board Exam Focus + Lifetime Doubt Support 🏆 Certificate + Project Portfolio 💰 Course Fee: ₹6,500 ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+🚀 Become a Python Pro in 30 Sessions! 🔥 Daily Coding | 5 Mini Projects | Real-World Skills 💡 From Basics to File Handling, Projects &amp; Final Assessment 🎯 Board Exam Focus + Lifetime Doubt Support 🏆 Certificate + Project Portfolio <span class="course-fee"><span class="fee-label">Course Fee</span><span class="fee-value">₹6,500</span></span> ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">POPULAR</span><br/>💻 C LANGUAGE BASICS FOUNDATION COURSE<br/><br/>
-🚀 Master C Programming in 30 Sessions! 💻 From Basics to Pointers &amp; Real Projects 🔥 Daily Coding Practice + Final Project 🎯 Strong Programming Foundation for Students 🏆 Certificate + Project Portfolio 💡 Lifetime Doubt Support 💰 Course Fee: ₹6,000 ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+🚀 Master C Programming in 30 Sessions! 💻 From Basics to Pointers &amp; Real Projects 🔥 Daily Coding Practice + Final Project 🎯 Strong Programming Foundation for Students 🏆 Certificate + Project Portfolio 💡 Lifetime Doubt Support <span class="course-fee"><span class="fee-label">Course Fee</span><span class="fee-value">₹6,000</span></span> ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">POPULAR</span><br/>💻 C++ BASICS FOUNDATION COURSE<br/><br/>
-🚀 Master C++ &amp; OOP in 30 Sessions! 💻 From Basics to Inheritance &amp; Real Projects 🔥 Daily Hands-On Coding + 30+ Practical Programs 🎯 Build Strong Programming &amp; OOP Skills 🏆 Certificate + Project Portfolio 💡 Lifetime Doubt Support 💰 Course Fee: ₹6,500 ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p><a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+🚀 Master C++ &amp; OOP in 30 Sessions! 💻 From Basics to Inheritance &amp; Real Projects 🔥 Daily Hands-On Coding + 30+ Practical Programs 🎯 Build Strong Programming &amp; OOP Skills 🏆 Certificate + Project Portfolio 💡 Lifetime Doubt Support <span class="course-fee"><span class="fee-label">Course Fee</span><span class="fee-value">₹6,500</span></span> ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p><a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">TRENDING</span><br/>🌐 WEB DESIGNING FOUNDATION COURSE HTML | CSS | JAVASCRIPT<br/><br/>
-🚀 Become a Web Designer in 30 Sessions! 🌐 Learn HTML | CSS | JavaScript from Scratch 🔥 Build Responsive Websites + Real Projects 💻 Daily Hands-On Coding &amp; Portfolio Creation 🏆 Certificate + Project Portfolio 💡 Lifetime Doubt Support 💰 Course Fee: ₹7,500 ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+🚀 Become a Web Designer in 30 Sessions! 🌐 Learn HTML | CSS | JavaScript from Scratch 🔥 Build Responsive Websites + Real Projects 💻 Daily Hands-On Coding &amp; Portfolio Creation 🏆 Certificate + Project Portfolio 💡 Lifetime Doubt Support <span class="course-fee"><span class="fee-label">Course Fee</span><span class="fee-value">₹7,500</span></span> ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">MOST POPULAR</span><br/>💻 PHP WITH MYSQL FOUNDATION COURSE<br/><br/>
-Master web development in just 30 Sessions! 🚀 Our day-wise PHP &amp; MySQL training turns beginners into job-ready developers with hands-on coding, real projects, and expert guidance. Build dynamic websites, gain confidence, and launch your tech career with Elshaddai Skill Centre! 💰 Course Fee: ₹6,500 ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+Master web development in just 30 Sessions! 🚀 Our day-wise PHP &amp; MySQL training turns beginners into job-ready developers with hands-on coding, real projects, and expert guidance. Build dynamic websites, gain confidence, and launch your tech career with Elshaddai Skill Centre! <span class="course-fee"><span class="fee-label">Course Fee</span><span class="fee-value">₹6,500</span></span> ⚡ Limited Seats <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">MOST TRENDING</span><br/>📊 MS-OFFICE FOR PROFESSIONALS<br/><br/>
-💼 Become MS-Office Professional in 30 Session! 📊 Word | Excel | PowerPoint Advanced Skills 🔥 Resume | Reports | Charts | Presentations 🎯 Perfect for Students &amp; Job Seekers 🏆 Completion Certificate 💻 Course Fee: ₹ 7000⚡ Limited Seats — Enroll Now &amp; Upgrade Your Career! <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+💼 Become MS-Office Professional in 30 Session! 📊 Word | Excel | PowerPoint Advanced Skills 🔥 Resume | Reports | Charts | Presentations 🎯 Perfect for Students &amp; Job Seekers 🏆 Completion Certificate 💻 Course Fee: <span class="fee-highlight"><span class="fee-icon">💰</span><span class="fee-label">Course Fee</span><span class="fee-amount">₹ 7000</span></span>⚡ Limited Seats — Enroll Now &amp; Upgrade Your Career! <p>🎯 Outcome: Build real projects + job-ready skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 <div class="card"> <span class="badge">MOST TRENDING</span><br/>☕ JAVA FOUNDATION COURSE<br/><br/>
-💻 Become Java Professional in 30 Session! ☕ Java Basics | OOPs | Classes &amp; Objects 🔥 Programs | Problem Solving | Mini Projects 🎯 Perfect for Students &amp; Beginners 🏆 Completion Certificate 💻 Course Fee: ₹ 6000⚡ Limited Seats — Enroll Now &amp; Upgrade Your Career! <p>🎯 Outcome: Build real Java programs + job-ready programming skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
+💻 Become Java Professional in 30 Session! ☕ Java Basics | OOPs | Classes &amp; Objects 🔥 Programs | Problem Solving | Mini Projects 🎯 Perfect for Students &amp; Beginners 🏆 Completion Certificate 💻 Course Fee: <span class="fee-highlight"><span class="fee-icon">💰</span><span class="fee-label">Course Fee</span><span class="fee-amount">₹ 6000</span></span>⚡ Limited Seats — Enroll Now &amp; Upgrade Your Career! <p>🎯 Outcome: Build real Java programs + job-ready programming skills</p> <a class="enroll-btn" href="#enquiry">Enroll in this course</a></div>
 </section><section class="professional-grid" id="services">
 <h2>CUSTOMER SERVICE SUPPORT ZONE</h2>
 <div class="card"> <span class="badge">MOST POPULAR</span><br/>🚀 SMART LAPTOP &amp; PC BUYING + SETUP SERVICE <br/><br/>
 💻 Smart Laptop &amp; PC Setup Service 🛒 Budget-Friendly Buying Support ⚙️ Software Installation &amp; OS Setup 🚀 Speed Boost &amp; Performance Tweaks 🛡️ Antivirus &amp; Security Setup ✅ Guaranteed Performance ⚡ Hassle-Free Service — Book Now!<br/><a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
 <div class="card"> <span class="badge">TRENDING</span><br/>🔥 EPF CLAIMS ASSISTANCE – FAST &amp; RELIABLE <br/><br/>
-🔥 EPF Claims Assistance – Fast &amp; Reliable ✅ PF Final Settlement (Form 19) ✅ PF Advance (Form 31) ✅ Pension Withdrawal (Form 10C) ✅ KYC Activation &amp; Corrections ✅ UAN Activation / Transfer ✅ Multiple Account Merging 📊 Process Time: 3–20 Days 💰 ₹299 per Claim ⚡ Success Guaranteed or Money Back <br/> <a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
-<div class="card"> <span class="badge">POPULAR</span><br/>💻 COLLEGE COMPUTER SCIENCE &amp; COMPUTER APPLICATIONS - MINI &amp; MAJOR PROJECTS AVAILABLE <br/><br/>
-🚀 Computer Science &amp; Computer Applications Projects Available! 💻 Mini &amp; Major Projects with Full Support 🎯 From Idea to Final Code + Portfolio Ready 🔥 Starting from ₹2000 🏆 Impress Your College &amp; Boost Your Career ⚡ Limited Slots — Book Now! <br/><a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
+🔥 EPF Claims Assistance – Fast &amp; Reliable ✅ PF Final Settlement (Form 19) ✅ PF Advance (Form 31) ✅ Pension Withdrawal (Form 10C) ✅ KYC Activation &amp; Corrections ✅ UAN Activation / Transfer ✅ Multiple Account Merging 📊 Process Time: 3–20 Days 💰 <span class="service-fee-highlight"><span class="fee-icon">🛠️</span><span class="fee-label">Service Fee</span><span class="fee-amount">₹300</span></span> per Claim ⚡ Success Guaranteed or Money Back <br/> <a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
+<div class="card"> <span class="badge">POPULAR</span><br/>💻 COLLEGE COMPUTER SCIENCE &amp; COMPUTER APPLICATIONS - MINI &amp; MAJOR PROJECTS AVAILABLE <br/><br/>      
+🚀 Computer Science &amp; Computer Applications Projects Available! 💻 Mini &amp; Major Projects with Full Support 🎯 From Idea to Final Code + Portfolio Ready 🔥 Starting from <span class="service-fee-highlight"><span class="fee-icon">🛠️</span><span class="fee-label">Service Fee</span><span class="fee-amount">₹2000+</span></span> 🏆 Impress Your College &amp; Boost Your Career ⚡ Limited Slots — Book Now! <br/><a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
 <div class="card"> <span class="badge">MOST TRENDING</span><br/>🪪 AADHAAR UPDATE ASSISTANCE AVAILABLE <br/><br/>
-🪪 Aadhaar Update Assistance Available ✅ Name, Address, DOB, Gender Update ✅ Mobile &amp; Email Update Support ✅ Aadhaar PVC Card Ordering Guidance 💡 Official UIDAI Method Guidance Provided 📊 Process Time: 15–30 Days 💰 ₹199 (Basic Update) ⚡ Easy • Secure • Hassle-Free Service <br/><a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
+🪪 Aadhaar Update Assistance Available ✅ Name, Address, DOB, Gender Update ✅ Mobile &amp; Email Update Support ✅ Aadhaar PVC Card Ordering Guidance 💡 Official UIDAI Method Guidance Provided 📊 Process Time: 15–30 Days 💰 <span class="service-fee-highlight"><span class="fee-icon">🛠️</span><span class="fee-label">Service Fee</span><span class="fee-amount">₹199</span></span>(Basic Update) ⚡ Easy • Secure • Hassle-Free Service <br/><a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
 <div class="card"> <span class="badge">MOST TRENDING</span><br/>⚡ EB INSTANT PAYMENT SERVICE <br/><br/>
-⚡ EB Instant Payment Service ✅ TANGEDCO Bill Payment (Instant) ⚡ Quick &amp; Hassle-Free Payment 🧾 Payment Confirmation Provided 📊 Process Time: Instant 💰 Service Charge: ₹75 🚀 Fast • Easy • Reliable <br/><a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
+⚡ EB Instant Payment Service ✅ TANGEDCO Bill Payment (Instant) ⚡ Quick &amp; Hassle-Free Payment 🧾 Payment Confirmation Provided 📊 Process Time: Instant 💰 <span class="service-fee-highlight"><span class="fee-icon">🛠️</span><span class="fee-label">Service Fee</span><span class="fee-amount">₹75</span></span>🚀 Fast • Easy • Reliable <br/><a class="enroll-btn" href="#enquiry">Enquire this Service</a></div>
 </section><section class="social-proof-section" id="reviews">
 <h2>GOOGLE REVIEWS</h2>
 <p><strong>Rated ⭐⭐⭐⭐⭐ by our students and parents</strong></p>
@@ -2337,7 +2457,7 @@ Master web development in just 30 Sessions! 🚀 Our day-wise PHP &amp; MySQL tr
 </div>
 <!-- GOOGLE REVIEW BUTTON -->
 <div style="text-align:center;margin-top:20px;">
-<a class="review-btn" href="https://www.google.com/search?q=Elshaddai+Skill+Centre" target="_blank" rel="noopener noreferrer">
+<a class="review-btn" href="https://www.google.com/search?q=Elshaddai+Skill+Centre" rel="noopener noreferrer" target="_blank">
 ⭐ View More Reviews on Google
 </a>
 </div>
@@ -2465,68 +2585,63 @@ Trusted by 1000+ Students | 5-Star Rated Institute
 </div>
 </section>
 <section class="college-conversion-section" id="college-students">
-  <div class="college-conversion-inner">
-    <span class="college-badge">🎓 COLLEGE STUDENTS — CAREER SKILLS</span>
-    <h2>BUILD JOB-READY SKILLS WHILE YOU STUDY</h2>
-    <p class="college-lead">
+<div class="college-conversion-inner">
+<span class="college-badge">🎓 COLLEGE STUDENTS — CAREER SKILLS</span>
+<h2>BUILD JOB-READY SKILLS WHILE YOU STUDY</h2>
+<p class="college-lead">
       Practical computer training for college students who want stronger programming,
       project, research, communication and workplace skills.
     </p>
-
-    <div class="college-benefit-grid">
-      <div class="college-benefit-card">
-        <div class="college-icon">💻</div>
-        <h3>Programming Skills</h3>
-        <p>Python, C, C++, Java, PHP with MySQL and Web Designing foundation courses.</p>
-      </div>
-      <div class="college-benefit-card">
-        <div class="college-icon">📊</div>
-        <h3>Project & Research Support</h3>
-        <p>College mini & major projects and research paper power sessions with practical guidance.</p>
-      </div>
-      <div class="college-benefit-card">
-        <div class="college-icon">📄</div>
-        <h3>MS Office for Careers</h3>
-        <p>Build professional skills in Word, Excel, PowerPoint, reports, charts and presentations.</p>
-      </div>
-      <div class="college-benefit-card">
-        <div class="college-icon">🗣️</div>
-        <h3>Communication Skills</h3>
-        <p>Improve spoken English, confidence and communication for interviews and everyday professional situations.</p>
-      </div>
-    </div>
-
-    <div class="college-course-strip">
-      <strong>🔥 POPULAR WITH COLLEGE STUDENTS</strong>
-      <span>Python</span><span>C / C++</span><span>Java</span><span>Web Designing</span>
-      <span>PHP + MySQL</span><span>MS Office</span><span>Projects</span><span>Research Paper</span>
-    </div>
-
-    <div class="college-cta-row">
-      <a class="college-primary-cta" href="#enquiry">🎯 BOOK YOUR COURSE</a>
-      <a class="college-secondary-cta" href="https://wa.me/918870211980" target="_blank" rel="noopener noreferrer">💬 ASK COURSE DETAILS</a>
-      <a class="college-secondary-cta" href="tel:+918870211980">📞 TALK TO US</a>
-    </div>
-
-    <p class="college-urgency">⚡ Limited slots • Evening batches • Appointment-based sessions • Practical training</p>
-  </div>
+<div class="college-benefit-grid">
+<div class="college-benefit-card">
+<div class="college-icon">💻</div>
+<h3>Programming Skills</h3>
+<p>Python, C, C++, Java, PHP with MySQL and Web Designing foundation courses.</p>
+</div>
+<div class="college-benefit-card">
+<div class="college-icon">📊</div>
+<h3>Project &amp; Research Support</h3>
+<p>College mini &amp; major projects and research paper power sessions with practical guidance.</p>
+</div>
+<div class="college-benefit-card">
+<div class="college-icon">📄</div>
+<h3>MS Office for Careers</h3>
+<p>Build professional skills in Word, Excel, PowerPoint, reports, charts and presentations.</p>
+</div>
+<div class="college-benefit-card">
+<div class="college-icon">🗣️</div>
+<h3>Communication Skills</h3>
+<p>Improve spoken English, confidence and communication for interviews and everyday professional situations.</p>
+</div>
+</div>
+<div class="college-course-strip">
+<strong>🔥 POPULAR WITH COLLEGE STUDENTS</strong>
+<span>Python</span><span>C / C++</span><span>Java</span><span>Web Designing</span>
+<span>PHP + MySQL</span><span>MS Office</span><span>Projects</span><span>Research Paper</span>
+</div>
+<div class="college-cta-row">
+<a class="college-primary-cta" href="#enquiry">🎯 BOOK YOUR COURSE</a>
+<a class="college-secondary-cta" href="https://wa.me/918870211980" rel="noopener noreferrer" target="_blank">💬 ASK COURSE DETAILS</a>
+<a class="college-secondary-cta" href="tel:+918870211980">📞 TALK TO US</a>
+</div>
+<p class="college-urgency">⚡ Limited slots • Evening batches • Appointment-based sessions • Practical training</p>
+</div>
 </section>
-
 <section class="community-section" id="subscription">
 <h2>SUBSCRIPTION SUPPORT</h2>
 <div class="card">
 <p>Follow us on our platforms for updates, tutorials, and course information:</p>
 <div style="display:flex;flex-wrap:wrap;gap:15px;margin-top:15px;">
-<a class="sub-btn yt" href="https://www.youtube.com/@JasonPaulS" target="_blank" rel="noopener noreferrer">
+<a class="sub-btn yt" href="https://www.youtube.com/@JasonPaulS" rel="noopener noreferrer" target="_blank">
 ▶ YouTube - Jason Paul S
 </a>
-<a class="sub-btn yt" href="https://www.youtube.com/@elshaddaiskillcentre" target="_blank" rel="noopener noreferrer">
+<a class="sub-btn yt" href="https://www.youtube.com/@elshaddaiskillcentre" rel="noopener noreferrer" target="_blank">
 ▶ YouTube - Elshaddai Skill Centre
 </a>
-<a class="sub-btn insta" href="https://www.instagram.com/elsh.addaiskillcentre/?hl=en" target="_blank" rel="noopener noreferrer">
+<a class="sub-btn insta" href="https://www.instagram.com/elsh.addaiskillcentre/?hl=en" rel="noopener noreferrer" target="_blank">
 📷 Instagram
 </a>
-<a class="sub-btn wa" href="https://wa.me/918870211980" target="_blank" rel="noopener noreferrer">
+<a class="sub-btn wa" href="https://wa.me/918870211980" rel="noopener noreferrer" target="_blank">
 💬 WhatsApp
 </a>
 </div>
@@ -2610,15 +2725,15 @@ Extended Sessions: 1.5 Hours to 2 Hours (Based on Flexibility)<br/><br/>
 📞 Reach us via WhatsApp or Phone Call
 </div>
 <div style="margin-top:15px; text-align:center;">
-<a href="https://share.google/ow6SqLSRfL3lEnrOk" style="display:block; background:#FFD54F; color:#000; padding:10px; border-radius:8px; margin-bottom:10px; text-decoration:none; font-weight:600;" target="_blank" rel="noopener noreferrer">
+<a href="https://share.google/ow6SqLSRfL3lEnrOk" rel="noopener noreferrer" style="display:block; background:#FFD54F; color:#000; padding:10px; border-radius:8px; margin-bottom:10px; text-decoration:none; font-weight:600;" target="_blank">
 ⭐ View on Google Business Profile
 </a>
-<a href="https://www.justdial.com/Thanjavur/Elshaddai-Skill-Centre-Near-Ration-Shop-Sundram-Nagar-Sundram-Nagar/9999P4362-4362-230613145440-K9P2_BZDET" style="display:block; background:#fff; color:#000; padding:10px; border-radius:8px; text-decoration:none; font-weight:600;" target="_blank" rel="noopener noreferrer">
+<a href="https://www.justdial.com/Thanjavur/Elshaddai-Skill-Centre-Near-Ration-Shop-Sundram-Nagar-Sundram-Nagar/9999P4362-4362-230613145440-K9P2_BZDET" rel="noopener noreferrer" style="display:block; background:#fff; color:#000; padding:10px; border-radius:8px; text-decoration:none; font-weight:600;" target="_blank">
 📍 View on Justdial
 </a>
 </div>
 <div class="card"> <span class="badge">POPULAR</span>
-<iframe loading="lazy" title="Elshaddai Skill Centre location map" height="300" src="https://www.google.com/maps?q=10.7742027,79.1132123&amp;output=embed" style="border-radius:10px;border:0;" width="100%"></iframe>
+<iframe height="300" loading="lazy" src="https://www.google.com/maps?q=10.7742027,79.1132123&amp;output=embed" style="border-radius:10px;border:0;" title="Elshaddai Skill Centre location map" width="100%"></iframe>
 <p style="text-align:center;">
 📍 Located in Sundaram Nagar, Thanjavur – Easy Access for Nearby Students
 </p>
