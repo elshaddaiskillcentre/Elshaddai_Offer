@@ -2944,5 +2944,288 @@ Extended Sessions: 1.5 Hours to 2 Hours (Based on Flexibility)<br/><br/>
   if (enquiryForm) enquiryForm.addEventListener('submit', sendToWhatsApp);
 })();
 </script>
+
+<!-- ===== ELSHADDAI ADDITIVE UPGRADE v1: appended features; existing page content retained ===== -->
+<style id="esc-additive-upgrade-v1">
+  #esc-course-finder {
+    width: min(1240px, calc(100% - 32px));
+    margin: 24px auto 30px;
+    padding: clamp(18px, 2.4vw, 30px);
+    border: 1px solid rgba(23, 109, 168, .16);
+    border-radius: 26px;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 60%, #fff9e2 100%);
+    box-shadow: 0 18px 45px rgba(18, 63, 105, .09);
+    color: #102a43;
+    position: relative;
+    z-index: 1;
+  }
+  #esc-course-finder .esc-finder-eyebrow {
+    color: #df332b; font-size: .78rem; font-weight: 800;
+    letter-spacing: .09em; text-transform: uppercase; margin-bottom: 7px;
+  }
+  #esc-course-finder h2 {
+    margin: 0 0 9px; text-align: left; font-size: clamp(1.45rem, 3vw, 2.1rem);
+    line-height: 1.2; color: #123f69; background: none;
+    -webkit-text-fill-color: initial; letter-spacing: -.4px;
+  }
+  #esc-course-finder h2::after { display: none; }
+  #esc-course-finder .esc-finder-intro { margin: 0 0 20px; color: #52677b; line-height: 1.6; }
+  #esc-course-finder .esc-finder-grid {
+    display: grid; grid-template-columns: minmax(180px, 1.6fr) minmax(170px, 1fr) minmax(170px, 1fr) auto;
+    gap: 12px; align-items: end;
+  }
+  #esc-course-finder .esc-field label { display: block; margin: 0 0 7px; font-size: .82rem; font-weight: 700; color: #123f69; }
+  #esc-course-finder .esc-field input,
+  #esc-course-finder .esc-field select {
+    width: 100%; min-width: 0; margin: 0; padding: 13px 14px; min-height: 48px;
+    border: 1px solid #cfdeeb; border-radius: 12px; background: #fff; color: #102a43;
+    font: inherit; font-size: .93rem; box-shadow: none;
+  }
+  #esc-course-finder .esc-field input:focus,
+  #esc-course-finder .esc-field select:focus { outline: 3px solid rgba(23,109,168,.14); border-color: #176da8; }
+  #esc-course-finder .esc-reset {
+    min-height: 48px; padding: 12px 16px; border: 1px solid #c8d8e7; border-radius: 12px;
+    background: #fff; color: #123f69; font: inherit; font-size: .9rem; font-weight: 700; cursor: pointer;
+  }
+  #esc-course-finder .esc-finder-status { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 16px; color: #52677b; font-size: .9rem; }
+  #esc-course-finder .esc-finder-status strong { color: #123f69; }
+  .esc-filter-hidden, .esc-empty-course-section { display: none !important; }
+  .professional-grid > .card > .esc-course-details {
+    display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px;
+    margin: 10px 0 0; padding: 11px 15px; border: 1px solid #bdd7ea; border-radius: 13px;
+    background: #eff8ff; color: #123f69; font: inherit; font-size: .92rem; font-weight: 750;
+    line-height: 1.3; text-align: center; cursor: pointer; box-shadow: none; transition: .2s ease;
+  }
+  .professional-grid > .card > .esc-course-details:hover { background: #dff2ff; border-color: #176da8; transform: translateY(-1px); }
+  #esc-course-modal[hidden] { display: none !important; }
+  #esc-course-modal {
+    position: fixed; inset: 0; z-index: 100000; display: flex; align-items: center; justify-content: center;
+    padding: 18px; background: rgba(5, 24, 43, .72); backdrop-filter: blur(5px);
+  }
+  #esc-course-modal .esc-modal-dialog {
+    position: relative; width: min(720px, 100%); max-height: min(86vh, 850px); overflow: auto;
+    padding: clamp(20px, 4vw, 34px); border-radius: 24px; background: #fff; color: #102a43;
+    box-shadow: 0 24px 80px rgba(0,0,0,.28); outline: none;
+  }
+  #esc-course-modal .esc-modal-close-icon {
+    position: absolute; top: 12px; right: 14px; width: 42px; height: 42px; border-radius: 50%;
+    border: 1px solid #d6e2ec; background: #f4f8fb; color: #123f69; font-size: 1.55rem; cursor: pointer;
+  }
+  #esc-course-modal h2 { margin: 0 48px 18px 0; font-size: clamp(1.2rem, 3.3vw, 1.7rem); line-height: 1.3; color: #123f69; }
+  #esc-course-modal .esc-modal-copy { line-height: 1.75; overflow-wrap: anywhere; }
+  #esc-course-modal .esc-modal-copy p { margin: 9px 0; }
+  #esc-course-modal .esc-modal-copy a { overflow-wrap: anywhere; }
+  #esc-course-modal .esc-modal-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+  #esc-course-modal .esc-modal-actions a,
+  #esc-course-modal .esc-modal-actions button {
+    display: inline-flex; justify-content: center; align-items: center; min-height: 46px; padding: 12px 17px;
+    border-radius: 12px; text-decoration: none; font: inherit; font-weight: 750; cursor: pointer;
+  }
+  #esc-course-modal .esc-whatsapp-cta { background: #168954; border: 1px solid #168954; color: #fff; }
+  #esc-course-modal .esc-close-cta { background: #f1f6fa; border: 1px solid #cfdeeb; color: #123f69; }
+  body.esc-modal-open { overflow: hidden; }
+  @media (max-width: 950px) {
+    #esc-course-finder .esc-finder-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    #esc-course-finder { width: calc(100% - 20px); padding: 17px; border-radius: 20px; }
+    #esc-course-finder .esc-finder-grid { grid-template-columns: 1fr; }
+    #esc-course-finder .esc-reset { width: 100%; }
+    #esc-course-modal { padding: 10px; }
+    #esc-course-modal .esc-modal-dialog { max-height: 92vh; border-radius: 18px; }
+    #esc-course-modal .esc-modal-actions { flex-direction: column; }
+    #esc-course-modal .esc-modal-actions a, #esc-course-modal .esc-modal-actions button { width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .professional-grid > .card > .esc-course-details { transition: none; }
+  }
+</style>
+<script id="esc-additive-upgrade-v1-script">
+(() => {
+  'use strict';
+  if (document.getElementById('esc-course-finder')) return;
+
+  const COURSE_SECTION_SELECTOR = '#kids-learning, #kids-skills, #adult-learning, #skill-dev';
+  const courseSections = [...document.querySelectorAll(COURSE_SECTION_SELECTOR)];
+  if (!courseSections.length) return;
+
+  const finder = document.createElement('section');
+  finder.id = 'esc-course-finder';
+  finder.setAttribute('aria-labelledby', 'esc-course-finder-title');
+  finder.innerHTML = `
+    <div class="esc-finder-eyebrow">Find your next skill</div>
+    <h2 id="esc-course-finder-title">Smart Course Finder</h2>
+    <p class="esc-finder-intro">Search courses, narrow the list by topic or learner group, and open any course for details or a WhatsApp enquiry.</p>
+    <div class="esc-finder-grid">
+      <div class="esc-field"><label for="esc-course-search">Search courses</label><input id="esc-course-search" type="search" placeholder="Try Python, Excel, spoken English…" autocomplete="off"></div>
+      <div class="esc-field"><label for="esc-course-topic">Course area</label><select id="esc-course-topic"><option value="all">All course areas</option><option value="office">Computer &amp; Office</option><option value="programming">Programming &amp; Web</option><option value="kids">Kids &amp; Creative Skills</option><option value="english">English &amp; Communication</option><option value="academic">Tuition &amp; Research</option></select></div>
+      <div class="esc-field"><label for="esc-course-audience">Learner group</label><select id="esc-course-audience"><option value="all">All learners</option><option value="kids">Kids &amp; School Students</option><option value="adult">College Students &amp; Adults</option><option value="career">Beginners &amp; Job Seekers</option></select></div>
+      <button type="button" class="esc-reset" id="esc-course-reset">Clear filters</button>
+    </div>
+    <div class="esc-finder-status" aria-live="polite"><span id="esc-course-count"><strong>Courses</strong> ready to explore</span><span>Choose <strong>View Details</strong> to enquire about a course.</span></div>
+  `;
+
+  const firstCourseSection = document.querySelector('#kids-learning') || courseSections[0];
+  firstCourseSection.parentNode.insertBefore(finder, firstCourseSection);
+
+  const modal = document.createElement('div');
+  modal.id = 'esc-course-modal';
+  modal.hidden = true;
+  modal.innerHTML = `
+    <div class="esc-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="esc-course-modal-title" tabindex="-1">
+      <button type="button" class="esc-modal-close-icon" aria-label="Close course details">&times;</button>
+      <h2 id="esc-course-modal-title">Course Details</h2>
+      <div id="esc-course-modal-body" class="esc-modal-copy"></div>
+      <div class="esc-modal-actions">
+        <a id="esc-course-modal-whatsapp" class="esc-whatsapp-cta" href="https://wa.me/918870211980" target="_blank" rel="noopener noreferrer">Ask about this course on WhatsApp</a>
+        <button type="button" class="esc-close-cta">Close details</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const searchInput = document.getElementById('esc-course-search');
+  const topicSelect = document.getElementById('esc-course-topic');
+  const audienceSelect = document.getElementById('esc-course-audience');
+  const countLabel = document.getElementById('esc-course-count');
+  const allCourseCards = courseSections.flatMap(section => [...section.querySelectorAll(':scope > .card')]);
+
+  function cardText(card) { return (card.innerText || card.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase(); }
+  function topicMatches(card, topic) {
+    if (topic === 'all') return true;
+    const text = cardText(card);
+    const sectionId = card.closest('section')?.id || '';
+    if (topic === 'office') return /computer|ms\s*-?office|word|excel|powerpoint|ms paint|typing|windows basics/.test(text);
+    if (topic === 'programming') return /python|c\s*\+\s*\+|c language|web designing|html|javascript|php|mysql|java foundation/.test(text);
+    if (topic === 'kids') return ['kids-learning', 'kids-skills'].includes(sectionId) || /for kids|kids|phonics|calligraphy|maths basics|canva for kids/.test(text);
+    if (topic === 'english') return /spoken english|speak english|communication skills/.test(text);
+    if (topic === 'academic') return /tuition|research paper|spss|computer science tuition/.test(text);
+    return true;
+  }
+  function audienceMatches(card, audience) {
+    if (audience === 'all') return true;
+    const text = cardText(card);
+    const sectionId = card.closest('section')?.id || '';
+    if (audience === 'kids') return ['kids-learning', 'kids-skills'].includes(sectionId) || /for kids|standard [1-8]|class [1-8]/.test(text);
+    if (audience === 'adult') return ['adult-learning', 'skill-dev'].includes(sectionId);
+    if (audience === 'career') return /beginner|foundation|job seeker|professional|career|real-world/.test(text);
+    return true;
+  }
+  function applyCourseFilters() {
+    const query = searchInput.value.trim().toLowerCase();
+    const topic = topicSelect.value;
+    const audience = audienceSelect.value;
+    let shown = 0;
+    courseSections.forEach(section => {
+      let sectionShown = 0;
+      [...section.querySelectorAll(':scope > .card')].forEach(card => {
+        const matched = (!query || cardText(card).includes(query)) && topicMatches(card, topic) && audienceMatches(card, audience);
+        card.classList.toggle('esc-filter-hidden', !matched);
+        if (matched) { shown++; sectionShown++; }
+      });
+      section.classList.toggle('esc-empty-course-section', sectionShown === 0);
+    });
+    countLabel.innerHTML = `<strong>${shown}</strong> course${shown === 1 ? '' : 's'} found`;
+  }
+
+  function titleFromCard(card) {
+    const clone = card.cloneNode(true);
+    clone.querySelectorAll('.badge, .enroll-btn, .esc-course-details').forEach(node => node.remove());
+    const lines = (clone.innerText || clone.textContent || '').split(/\n+/).map(line => line.trim()).filter(Boolean);
+    return (lines[0] || 'Course Details').replace(/\s+/g, ' ').slice(0, 120);
+  }
+
+  const dialog = modal.querySelector('.esc-modal-dialog');
+  const modalTitle = document.getElementById('esc-course-modal-title');
+  const modalBody = document.getElementById('esc-course-modal-body');
+  const modalWhatsApp = document.getElementById('esc-course-modal-whatsapp');
+  let lastFocusedElement = null;
+
+  function openDetails(card) {
+    lastFocusedElement = document.activeElement;
+    const title = titleFromCard(card);
+    const clone = card.cloneNode(true);
+    clone.classList.remove('card');
+    clone.classList.add('esc-modal-copy');
+    clone.querySelectorAll('.badge, .enroll-btn, .esc-course-details').forEach(node => node.remove());
+    modalTitle.textContent = title;
+    modalBody.replaceChildren(clone);
+    const message = `Hello Elshaddai Skill Centre, please share the complete syllabus, fee details and available batches for: ${title}.`;
+    modalWhatsApp.href = `https://wa.me/918870211980?text=${encodeURIComponent(message)}`;
+    modal.hidden = false;
+    document.body.classList.add('esc-modal-open');
+    dialog.focus();
+  }
+  function closeDetails() {
+    modal.hidden = true;
+    document.body.classList.remove('esc-modal-open');
+    if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') lastFocusedElement.focus();
+  }
+  modal.querySelectorAll('.esc-modal-close-icon, .esc-close-cta').forEach(button => button.addEventListener('click', closeDetails));
+  modal.addEventListener('click', event => { if (event.target === modal) closeDetails(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.hidden) closeDetails(); });
+
+  // Add details actions without replacing existing card text or enrol buttons.
+  allCourseCards.forEach(card => {
+    if (card.querySelector('.esc-course-details')) return;
+    const detailsButton = document.createElement('button');
+    detailsButton.type = 'button';
+    detailsButton.className = 'esc-course-details';
+    detailsButton.textContent = 'View Course Details';
+    detailsButton.addEventListener('click', () => openDetails(card));
+    const enrollLink = card.querySelector('.enroll-btn');
+    if (enrollLink) enrollLink.insertAdjacentElement('beforebegin', detailsButton);
+    else card.appendChild(detailsButton);
+  });
+
+  // Preselect the current course in the site's existing enquiry form before its normal anchor navigation.
+  const enrollmentCourseMap = [
+    { re: /phonics/i, category: 'kids', course: 'Phonics' },
+    { re: /calligraphy/i, category: 'kids', course: 'Calligraphy' },
+    { re: /maths basics/i, category: 'kids', course: 'Maths' },
+    { re: /ms\s*-?paint/i, category: 'kids-skills', course: 'MS Paint' },
+    { re: /spoken english|speak english/i, category: 'kids-skills', course: 'Spoken English' },
+    { re: /canva/i, category: 'kids-skills', course: 'Canva' },
+    { re: /11th|12th|computer science tuition/i, category: 'adult', course: 'Tuition' },
+    { re: /research paper|spss/i, category: 'adult', course: 'Research Paper' },
+    { re: /python/i, category: 'skill-dev', course: 'Python' },
+    { re: /c\s*\+\s*\+/i, category: 'skill-dev', course: 'C++' },
+    { re: /c language/i, category: 'skill-dev', course: 'C' },
+    { re: /web designing|html/i, category: 'skill-dev', course: 'Web-HTML' },
+    { re: /php|mysql/i, category: 'skill-dev', course: 'PHP' },
+    { re: /java foundation/i, category: 'skill-dev', course: 'Java' },
+    { re: /ms\s*-?office|computer fundamentals/i, category: 'skill-dev', course: 'MS Office' }
+  ];
+  document.addEventListener('click', event => {
+    const link = event.target.closest('.enroll-btn[href="#enquiry"]');
+    if (!link) return;
+    const card = link.closest('.card');
+    const section = link.closest(COURSE_SECTION_SELECTOR);
+    if (!card || !section) return;
+    const text = cardText(card);
+    let mapping = enrollmentCourseMap.find(item => item.re.test(text));
+    if (mapping && section.id === 'kids-skills' && /ms\s*-?office/i.test(text)) {
+      mapping = { category: 'kids-skills', course: 'MS Office' };
+    }
+    const categoryField = document.getElementById('category');
+    const courseField = document.getElementById('course');
+    if (!mapping || !categoryField || !courseField) return;
+    categoryField.value = mapping.category;
+    categoryField.dispatchEvent(new Event('change', { bubbles: true }));
+    const matchingOption = [...courseField.options].find(option => option.value.toLowerCase() === mapping.course.toLowerCase());
+    if (matchingOption) courseField.value = matchingOption.value;
+  });
+
+  searchInput.addEventListener('input', applyCourseFilters);
+  topicSelect.addEventListener('change', applyCourseFilters);
+  audienceSelect.addEventListener('change', applyCourseFilters);
+  document.getElementById('esc-course-reset').addEventListener('click', () => {
+    searchInput.value = ''; topicSelect.value = 'all'; audienceSelect.value = 'all'; applyCourseFilters(); searchInput.focus();
+  });
+  applyCourseFilters();
+})();
+</script>
+<!-- ===== END ELSHADDAI ADDITIVE UPGRADE v1 ===== -->
+
 </body>
 </html>
