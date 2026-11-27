@@ -55,7 +55,7 @@
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       "opens": "06:00",
       "closes": "08:00"
     },
@@ -2608,7 +2608,7 @@ Learner experiences from school, college and adult skill programmes
 <a class="college-secondary-cta" href="https://wa.me/918870211980" rel="noopener noreferrer" target="_blank">💬 ASK COURSE DETAILS</a>
 <a class="college-secondary-cta" href="tel:+918870211980">📞 TALK TO US</a>
 </div>
-<p class="college-urgency">⚡ Morning sessions Monday–Friday • Evening sessions Monday, Tuesday, Thursday &amp; Friday • Appointment-based sessions</p>
+<p class="college-urgency">⚡ Morning sessions Monday–Saturday (Saturday 6 AM–8 AM only) • Evening sessions Monday, Tuesday, Thursday &amp; Friday • Appointment-based sessions</p>
 </div>
 </section>
 <section class="community-section" id="subscription">
@@ -2689,7 +2689,7 @@ Learner experiences from school, college and adult skill programmes
 </div>
 <div class="card">
 <b>Are courses available with flexible timings in Thanjavur?</b>
-<p>Elshaddai Skill Centre offers morning sessions from 6:00 AM to 8:00 AM on Monday, Tuesday, Wednesday, Thursday and Friday. Evening sessions are available from 6:00 PM to 9:00 PM on Monday, Tuesday, Thursday and Friday. Wednesday has a morning session only. Flexible sessions are available by appointment.</p>
+<p>Elshaddai Skill Centre offers morning sessions from 6:00 AM to 8:00 AM on Monday, Tuesday, Wednesday, Thursday, Friday and Saturday. Saturday morning sessions are available from 6:00 AM to 8:00 AM only. Evening sessions are available from 6:00 PM to 9:00 PM on Monday, Tuesday, Thursday and Friday. Wednesday has a morning session only. Sunday is closed. Flexible sessions are available by appointment.</p>
 </div>
 <div class="card">
 <b>Do you provide certificates after course completion?</b>
@@ -2707,7 +2707,7 @@ Monday, Tuesday, Wednesday, Thursday &amp; Friday<br/><br/>
 Evening: 6:00 PM – 9:00 PM<br/>
 Monday, Tuesday, Thursday &amp; Friday<br/><br/>
 Wednesday: Morning session only<br/>
-Saturday &amp; Sunday: Closed<br/><br/>
+Saturday: Morning session only, 6:00 AM – 8:00 AM<br/><br/>Sunday: Closed<br/><br/>
 
 📅 Other visits and extended sessions are available by appointment.<br/><br/>
 
@@ -2801,7 +2801,7 @@ Extended Sessions: 1.5 Hours to 2 Hours (Based on Flexibility)<br/><br/>
     const now = new Date();
     const day = now.getDay();
     const hour = now.getHours();
-    const morningDays = [1, 2, 3, 4, 5]; // Monday to Friday
+    const morningDays = [1, 2, 3, 4, 5, 6]; // Monday to Saturday
     const eveningDays = [1, 2, 4, 5]; // Monday, Tuesday, Thursday and Friday
     const isWorkingDay = morningDays.includes(day);
     const minuteOfDay = hour * 60 + now.getMinutes();
@@ -2815,10 +2815,12 @@ Extended Sessions: 1.5 Hours to 2 Hours (Based on Flexibility)<br/><br/>
     } else if (isWorkingDay) {
       availability.textContent = day === 3
         ? '🟡 Wednesday morning session: 6 AM–8 AM only'
-        : '🟡 Sessions today: Morning 6 AM–8 AM | Evening 6 PM–9 PM';
+        : day === 6
+          ? '🟡 Saturday morning session: 6 AM–8 AM only'
+          : '🟡 Sessions today: Morning 6 AM–8 AM | Evening 6 PM–9 PM';
       availability.dataset.status = 'today';
     } else {
-      availability.textContent = '🔴 Closed today. Morning sessions: Mon–Fri, 6 AM–8 AM | Evening sessions: Mon, Tue, Thu and Fri, 6 PM–9 PM';
+      availability.textContent = '🔴 Closed today. Morning sessions: Mon–Sat, 6 AM–8 AM (Saturday morning only) | Evening sessions: Mon, Tue, Thu and Fri, 6 PM–9 PM';
       availability.dataset.status = 'closed';
     }
   }
