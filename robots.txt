@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elshaddaiskillcentre.github.io/Elshaddai_Offer/sitemap.xml
